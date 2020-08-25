@@ -22,22 +22,21 @@ public class GameManager : MonoBehaviour {
     LongGrass lg;
     // private LongGrass lg;
     Player player;
-    int i = 1;
-    
+    int i = 1;   
 
     public GameObject menu;
+    public static bool checkBattle;
     // private MenuController mc;
 
 	void Start () {
-        
+        checkBattle = false;
         bm = GetComponent<BattleManager>();
         player = GameObject.Find("Player").GetComponent<Player>();
-        
     }
 	
 	void Update () {
-        if(Input.GetKeyDown(KeyCode.E)) {
-            // Debug.Log("E button pressed");
+        if(Input.GetKeyDown(KeyCode.E) && checkBattle == false) {
+            //Debug.Log("E button pressed");
             toggleMenuUI();
         }
         if (Input.GetKeyDown(KeyCode.L)) 
@@ -58,11 +57,13 @@ public class GameManager : MonoBehaviour {
 
     public void EnterBattle()
     {
+        checkBattle = true;
         Time.timeScale = 0f;
         SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
     }
 
     public void ExitBattle() {
+        checkBattle = false;
         SceneManager.UnloadSceneAsync("Battle_Scene");
         Time.timeScale = 1f;
     }

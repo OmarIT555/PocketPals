@@ -86,6 +86,7 @@ public class LongGrass : MonoBehaviour {
                         }
                     }   
                 }
+        triggered = false;
         //     }
         // }
     }

@@ -105,6 +105,7 @@ enum Direction
     West
 }*/
 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -117,46 +118,54 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 change;
     public Animator Ani;
     public bool canMove;
-    
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
         Ani = GetComponent<Animator>();
         myRigidBod = GetComponent<Rigidbody2D>();
         canMove = true;
-      
+
     }
 
-  
-// Update is called once per frame
+
+    // Update is called once per frame
     void Update()
     {
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
+    }
+
+    // Update is united to framerate and updates 50 times per second
+    void FixedUpdate()
+    {
         AnimateMove();
         StopMovement();
     }
 
     public void StopMovement()
     {
-        if (SceneManager.GetSceneByName("Battle_Scene").isLoaded){
+        if (SceneManager.GetSceneByName("Battle_Scene").isLoaded)
+        {
             //print("Trouble");
             CanNotMove();
         }
-        if (GameObject.FindGameObjectWithTag("MenuCanvas")) {
+        if (GameObject.FindGameObjectWithTag("MenuCanvas"))
+        {
             //print("Trouble");
             myRigidBod.constraints = RigidbodyConstraints2D.FreezePosition;
-            CanNotMove();  
+            CanNotMove();
         }
-        else {
+        else
+        {
             myRigidBod.constraints = RigidbodyConstraints2D.FreezeRotation;
             AnimateMove();
         }
     }
 
-  
+
     void AnimateMove()
     {
         if (canMove && change != Vector3.zero)
@@ -173,18 +182,20 @@ public class PlayerMovement : MonoBehaviour
     }
     void Move()
     {
-        
+
         myRigidBod.MovePosition(
             transform.position + change * speed * Time.deltaTime
             );
-        
+
     }
-    void CanNotMove() {
+    void CanNotMove()
+    {
         Ani.SetFloat("inputX", 0);
         Ani.SetFloat("inputY", 0);
         Ani.SetBool("moving", false);
     }
 
 }
+
 
 
