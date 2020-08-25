@@ -440,7 +440,7 @@ Transform:
   - {fileID: 1318166611}
   - {fileID: 904013589}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &86039732
 MonoBehaviour:
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6cf3c2dce7864f9698f58d35f6d0ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 1965821307}
+  gm: {fileID: 2041405946}
   player: {fileID: 0}
   currentMenu: 4
   currentMessageType: 0
@@ -1987,7 +1987,7 @@ RectTransform:
   - {fileID: 1415471357}
   - {fileID: 466227620}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2886,70 +2886,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954950339}
   m_CullTransparentMesh: 0
---- !u!1 &1965821306
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1965821308}
-  - component: {fileID: 1965821307}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: GameManager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1965821307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965821306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 110ce18ca44b0bb458a27694e99ff4f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allPokemon:
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
-  - pokemon: {fileID: 0}
-    basePokemonID: 0
-    moves: []
-  allMoves: []
-  menu: {fileID: 0}
---- !u!4 &1965821308
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965821306}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2038974733
 GameObject:
   m_ObjectHideFlags: 0
@@ -3029,6 +2965,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038974733}
   m_CullTransparentMesh: 0
+--- !u!1 &2041405945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2041405947}
+  - component: {fileID: 2041405946}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2041405946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041405945}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110ce18ca44b0bb458a27694e99ff4f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPokemon: []
+  allMoves: []
+  menu: {fileID: 0}
+--- !u!4 &2041405947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041405945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -47.69775, y: -10.030895, z: -24.220703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2097630640
 GameObject:
   m_ObjectHideFlags: 0
