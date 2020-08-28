@@ -11388,7 +11388,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770491985}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaf77a1a00b4f3844afbebb950327dc9, type: 3}
   m_Name: 
@@ -11396,6 +11396,24 @@ MonoBehaviour:
   sign: {fileID: 1930634542}
   signText: {fileID: 1930634541}
   text: 'Nurse: I can''t heal your pokect pals yet...try again later!'
+  active: 0
+--- !u!114 &1770491988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770491985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea7a8533d0b617429a5570118050c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  poke: {fileID: 1930634542}
+  speechText: {fileID: 1930634541}
+  playerFullHealth: 0
+  text: Your pokemon have been fullied healed.
   active: 0
 --- !u!1001 &1930634540
 PrefabInstance:

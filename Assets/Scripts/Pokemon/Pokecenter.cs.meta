@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8ea7a8533d0b617429a5570118050c4a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {instanceID: 0}
+  - poke: {fileID: 50354309302074791, guid: 4b887e8f2acb3364dae119c3630eab65, type: 3}
+  - speechText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

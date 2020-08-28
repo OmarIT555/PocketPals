@@ -543,6 +543,7 @@ public class BattleManager : MonoBehaviour
                 i++;
             }
         }
+        updatePlayerHealthBar(playerHealth);
         tempAtkPoke.transform.localScale += player.ownedPokemon[i].pokemon.scalePos;
         tempAtkPoke.transform.position += player.ownedPokemon[i].pokemon.pos;
         updateBattleStatus();
