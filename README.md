@@ -37,6 +37,21 @@ This game is a project for school. We do not have any rights or own pokemon in a
 Music can be found at https://soundcloud.com/aural-space/sets/puzzle-game-music/ .
 
 
+## SoftDev 2 Team - ***Aqua Team Thunder Force*** - ***Pocket Pals***
+https://github.com/soft-eng-practicum/PocketPals
+
+**Communication tool(s):** *Discord*
+
+:slightly_smiling_face: List of Members :slightly_smiling_face:
+
++ **Omar**
+
+**1** - UI/UX design
+
+**2** - Documentation lead
+
+
+
 ## The Team
 
 Joseph Zoretic
