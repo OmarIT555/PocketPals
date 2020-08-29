@@ -42,7 +42,7 @@ https://github.com/soft-eng-practicum/PocketPals
 
 **Communication tool(s):** *Discord*
 
-:slightly_smiling_face: List of Members :slightly_smiling_face:
+:star_struck: :slightly_smiling_face: List of Members :slightly_smiling_face: :star_struck:
 
 + **Omar**
 
@@ -50,6 +50,13 @@ https://github.com/soft-eng-practicum/PocketPals
 
 **2** - Documentation lead
 
++ **Dennis**
+
+**1** - Code architecture/lead programmer
+
+**2** - Team manager
+
+**3** - Client liaison
 
 
 ## The Team
