@@ -60,9 +60,9 @@ https://github.com/soft-eng-practicum/PocketPals
 
 + **Anas**
 
-**1** - Data Modeler
+**1** - *Data Modeler*
 
-**2** - Testing lead
+**2** - *Testing lead*
 
 
 ## The Team
