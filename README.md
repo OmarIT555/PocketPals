@@ -52,11 +52,11 @@ https://github.com/soft-eng-practicum/PocketPals
 
 + **Dennis**
 
-**1** - Code architecture/lead programmer
+**1** - *Code architecture*/*lead programmer*
 
-**2** - Team manager
+**2** - *Team manager*
 
-**3** - Client liaison
+**3** - *Client liaison*
 
 + **Anas**
 
