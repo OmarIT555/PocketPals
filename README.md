@@ -46,9 +46,9 @@ https://github.com/soft-eng-practicum/PocketPals
 
 + **Omar**
 
-**1** - UI/UX design
+**1** - *UI/UX design*
 
-**2** - Documentation lead
+**2** - *Documentation lead*
 
 + **Dennis**
 
