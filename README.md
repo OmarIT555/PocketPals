@@ -42,7 +42,7 @@ https://github.com/soft-eng-practicum/PocketPals
 
 **Communication tool(s):** *Discord*
 
-:star_struck: :slightly_smiling_face: List of Members :slightly_smiling_face: :star_struck:
+:star_struck: :slightly_smiling_face: List of Members :slightly_smiling_face: :star_struck: :grinning: :smiling_face_with_three_hearts:
 
 + **Omar**
 
@@ -57,6 +57,12 @@ https://github.com/soft-eng-practicum/PocketPals
 **2** - Team manager
 
 **3** - Client liaison
+
++ **Anas**
+
+**1** - Data Modeler
+
+**2** - Testing lead
 
 
 ## The Team
