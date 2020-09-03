@@ -6449,7 +6449,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850655996}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaf77a1a00b4f3844afbebb950327dc9, type: 3}
   m_Name: 
@@ -6510,6 +6510,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14737447, y: 0.20202073}
   m_EdgeRadius: 0
+--- !u!114 &850656000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850655996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f4b344260db9548933f4bf770cfa3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sign: {fileID: 1627101223}
+  signText: {fileID: 1627101222}
+  text: 'Austin: I''m the buff beef boy gym leader. Let''s get this started!'
+  active: 0
 --- !u!1001 &1084954124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13992,11 +14008,6 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5492935059393410920, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 29.8
-      objectReference: {fileID: 0}
     - target: {fileID: 5492935059322737467, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -14021,6 +14032,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410920, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 29.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b7f785bc6f3a844aa3b39d5dc2e520, type: 3}
