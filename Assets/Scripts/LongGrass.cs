@@ -2,13 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class LongGrass : MonoBehaviour {
+public class LongGrass : MonoBehaviour
+{
 
     public List<WildPokemon> wildPokemon = new List<WildPokemon>();
     public BiomeList grassType;
 
     private GameManager gm;
-    private BattleManager bm;
     private float vc = 10 / 187.5f;
     private float c = 8.5f / 187.5f;
     private float sr = 6.75f / 187.5f;
@@ -18,74 +18,86 @@ public class LongGrass : MonoBehaviour {
     public Rarity raritySet;
     public bool triggered = false;
 
-	void Start () {
+    void Start()
+    {
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        bm = GetComponent<BattleManager>();
-	}
-	
-	void Update () {
-	    
-	}
-    public void sendListToGM(){
+    }
+
+    void Update()
+    {
+
+    }
+    public void sendListToGM()
+    {
         foreach (WildPokemon Pokemon in wildPokemon)
         {
-                gm.allPokemon.Add(Pokemon);
+            gm.allPokemon.Add(Pokemon);
         }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-                float p = Random.Range(0.0f, 100.0f);
-                if (triggered == false)
+        float p = Random.Range(0.0f, 100.0f);
+        if (triggered == false)
+        {
+            if (p < vr * 100)
+            {
+                if (gm != null)
                 {
-                        if(p < vr*100)
-                    {
-                        if (gm != null) {
-                            raritySet = Rarity.VeryRare;
-                            gm.EnterBattle();
-                            print("Rarity set OnTriggerEnter: " + raritySet);
-                            triggered = true;
-                        }
-                    }
-                    else if(p < r*100)
-                    {
-                        if (gm != null) {
-                            raritySet = Rarity.Rare;
-                            gm.EnterBattle();
-                            print("Rarity set OnTriggerEnter: " + raritySet);
-                            triggered = true;
-                        }
-                    }
-                    else if(p < sr*100)
-                    {
-                        if (gm != null) {
-                            raritySet = Rarity.SemiRare;
-                            gm.EnterBattle();
-                            print("Rarity set OnTriggerEnter: " + raritySet);
-                            triggered = true;
-                        }
-                    }
-                    else if(p < c*100)
-                    {
-                        if (gm != null) {
-                            raritySet  = Rarity.Common;
-                            gm.EnterBattle();
-                            print("Rarity set OnTriggerEnter: " + raritySet);
-                            triggered = true;
-                        }
-                            
-                    }
-                    else if(p < vc*100)
-                    {
-                        if (gm != null) {
-                            Debug.Log("very common");
-                            raritySet = Rarity.VeryCommon;
-                            gm.EnterBattle();
-                            print("Rarity set OnTriggerEnter: " + raritySet);
-                            triggered = true;
-                        }
-                    }   
+                    raritySet = Rarity.VeryRare;
+                    gm.setBattleType(0);
+                    gm.EnterBattle();
+                    print("Rarity set OnTriggerEnter: " + raritySet);
+                    triggered = true;
                 }
+            }
+            else if (p < r * 100)
+            {
+                if (gm != null)
+                {
+                    raritySet = Rarity.Rare;
+                    gm.setBattleType(0);
+                    gm.EnterBattle();
+                    print("Rarity set OnTriggerEnter: " + raritySet);
+                    triggered = true;
+                }
+            }
+            else if (p < sr * 100)
+            {
+                if (gm != null)
+                {
+                    raritySet = Rarity.SemiRare;
+                    gm.setBattleType(0);
+                    gm.EnterBattle();
+                    print("Rarity set OnTriggerEnter: " + raritySet);
+                    triggered = true;
+                }
+            }
+            else if (p < c * 100)
+            {
+                if (gm != null)
+                {
+                    raritySet = Rarity.Common;
+                    gm.setBattleType(0);
+                    gm.EnterBattle();
+                    print("Rarity set OnTriggerEnter: " + raritySet);
+                    triggered = true;
+                }
+
+            }
+            else if (p < vc * 100)
+            {
+                if (gm != null)
+                {
+                    Debug.Log("very common");
+                    raritySet = Rarity.VeryCommon;
+                    gm.setBattleType(0);
+                    gm.EnterBattle();
+                    print("Rarity set OnTriggerEnter: " + raritySet);
+                    triggered = true;
+                }
+            }
+        }
         triggered = false;
         //     }
         // }
@@ -99,7 +111,7 @@ public class WildPokemon
     //do not serailize this field, instead load it with ID
     // [System.NonSerialized] public BasePokemon pokemon; 
     // [System.NonSerialized]
-    public BasePokemon pokemon; 
+    public BasePokemon pokemon;
     // pokemon = 
     // public int health = pokemon.HP;
     public int basePokemonID;

@@ -22,7 +22,8 @@ public class GameManager : MonoBehaviour {
     LongGrass lg;
     // private LongGrass lg;
     Player player;
-    int i = 1;   
+    int i = 1;
+    int battleType;
 
     public GameObject menu;
     public static bool checkBattle;
@@ -110,6 +111,16 @@ public class GameManager : MonoBehaviour {
         // for(int i = 0; i<lg.wildPokemon.count;i++) {
 
         // }
+    }
+
+    public void setBattleType(int i)
+    {
+        battleType = i;
+    }
+
+    public int getBattleType()
+    {
+        return battleType;
     }
 
     public WildPokemon GetRandomPokemonFromList(List<WildPokemon> pokeList)

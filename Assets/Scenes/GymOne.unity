@@ -6348,6 +6348,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Austin
       objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_TagString
+      value: GymLeader
+      objectReference: {fileID: 0}
     - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6523,6 +6528,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sign: {fileID: 1627101223}
+  ownedPokemon:
+  - NickName: 
+    pokemon: {fileID: 5900891777610994904, guid: f6554920830d16244a265f1f3b4765f7,
+      type: 3}
+    basePokemonID: 15
+    moves:
+    - Name: Chop
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 7
+      currentPP: 15
+      PP: 15
+      power: 50
+      accuracy: 100
+    - Name: Bulk Up
+      category: 2
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 7
+      currentPP: 20
+      PP: 20
+      power: 0
+      accuracy: 100
   signText: {fileID: 1627101222}
   text: 'Austin: I''m the buff beef boy gym leader. Let''s get this started!'
   active: 0

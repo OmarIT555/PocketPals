@@ -15,6 +15,7 @@ public class BattleManager : MonoBehaviour
     [Header("Selection")]
     public GameObject SelectionMenu;
     public GameObject SelectionInfo;
+    public GymBattle gymB;
     public Text SelectionInfoText;
     public Text fight;
     private string fightSelected = "> Fight";
@@ -100,6 +101,8 @@ public class BattleManager : MonoBehaviour
     float move4Accuracy;
     float move4Power;
 
+    int battleType;
+
     [Header("Info")]
     //Message/Info Panel
     public GameObject InfoMenu;
@@ -143,14 +146,20 @@ public class BattleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lg = GameObject.FindGameObjectWithTag("Long_Grass").GetComponent<LongGrass>();
+        gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        if (gm.getBattleType() == 0) {
+            lg = GameObject.FindGameObjectWithTag("Long_Grass").GetComponent<LongGrass>();
+            rarityBM = lg.raritySet;
+        } else if (gm.getBattleType() == 1) { 
+        gymB = GameObject.FindGameObjectWithTag("GymLeader").GetComponent<GymBattle>();
+        }
         player = GameObject.Find("Player").GetComponent<Player>();
+        battleType = gm.getBattleType();
         print(player);
         changeMenu(BattleMenu.Selection);
 
         // loadBattle(rarity);
        currentSelection = 1;
-       rarityBM = lg.raritySet;
        Debug.Log(rarityBM);
        loadBattle(rarityBM);
        enemyCurHealth = enemyHealth;
@@ -411,9 +420,14 @@ public class BattleManager : MonoBehaviour
     }
 
 
+    
+
     public void loadBattle(Rarity rarity) {
+        
         changeMenu(BattleMenu.Selection);
-        print("wildPokemon count: "+lg.wildPokemon.Count);
+        if (battleType == 0)
+        {
+            print("wildPokemon count: "+lg.wildPokemon.Count);
         // print("ownedPokemon count: "+player.ownedPokemon.Count);
         j = Random.Range(0,lg.wildPokemon.Count);
         // j=0;
@@ -421,30 +435,73 @@ public class BattleManager : MonoBehaviour
         //--------------Enemy----------------------
         // WildPokemon battlePokemon = gm.GetRandomPokemonFromList(gm.GetPokemonByRarity(rarity));
 
-        WildPokemon battlePokemon = lg.wildPokemon[j];
+        
+            WildPokemon battlePokemon = lg.wildPokemon[j];
 
-        // Debug.Log(battlePokemon.name);
-        GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
+            // Debug.Log(battlePokemon.name);
+            GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
 
-        dPoke.transform.parent = defencePodium;
+            dPoke.transform.parent = defencePodium;
 
-        BasePokemon tempDefPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
-        tempDefPoke.AddMember(battlePokemon.pokemon);
-        tempDefPoke.transform.localScale += battlePokemon.pokemon.scalePos;
+            BasePokemon tempDefPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
+            tempDefPoke.AddMember(battlePokemon.pokemon);
+            tempDefPoke.transform.localScale += battlePokemon.pokemon.scalePos;
 
-        dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.pokemon.image;
-        enemyHealth = battlePokemon.pokemon.HP;
-        enemyFullHealth = battlePokemon.pokemon.FullHP;
-        enemySpeed = battlePokemon.pokemon.pokemonStats.SpeedStat;
-        enemyName = battlePokemon.pokemon.PName;
-        enemyHPForeground.fillAmount = enemyFullHealth;
-        enemyLevel = battlePokemon.pokemon.level;
-        enemyType = battlePokemon.pokemon.type;
-        attackStatEnemy = battlePokemon.pokemon.pokemonStats.AttackStat;
-        specAttackStatEnemy = battlePokemon.pokemon.pokemonStats.SpAttackStat;
-        defenseStatEnemy = battlePokemon.pokemon.pokemonStats.DefenceStat;
-        specDefenseStatEnemy = battlePokemon.pokemon.pokemonStats.SpDefenceStat;
+            dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.pokemon.image;
+            enemyHealth = battlePokemon.pokemon.HP;
+            enemyFullHealth = battlePokemon.pokemon.FullHP;
+            enemySpeed = battlePokemon.pokemon.pokemonStats.SpeedStat;
+            enemyName = battlePokemon.pokemon.PName;
+            enemyHPForeground.fillAmount = enemyFullHealth;
+            enemyLevel = battlePokemon.pokemon.level;
+            enemyType = battlePokemon.pokemon.type;
+            attackStatEnemy = battlePokemon.pokemon.pokemonStats.AttackStat;
+            specAttackStatEnemy = battlePokemon.pokemon.pokemonStats.SpAttackStat;
+            defenseStatEnemy = battlePokemon.pokemon.pokemonStats.DefenceStat;
+            specDefenseStatEnemy = battlePokemon.pokemon.pokemonStats.SpDefenceStat;
+        } 
 
+        //Testing Gymbattles
+        else if (battleType == 1)
+        {
+            
+
+            // Debug.Log(battlePokemon.name);
+            GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
+
+            dPoke.transform.parent = defencePodium;
+
+            BasePokemon tempDefPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
+
+
+            i = 0;
+            print("ownedPokemon count: " + gymB.ownedPokemon.Count);
+            while (i < gymB.ownedPokemon.Count)
+            {
+                print(gymB.ownedPokemon[i].pokemon.name);
+
+                    tempDefPoke.AddMember(gymB.ownedPokemon[i].pokemon);
+                    tempDefPoke.transform.localScale += gymB.ownedPokemon[i].pokemon.scalePos;
+                    dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[i].pokemon.image;
+                    enemyHealth = gymB.ownedPokemon[i].pokemon.HP;
+                    enemyFullHealth = gymB.ownedPokemon[i].pokemon.FullHP;
+                    enemySpeed = gymB.ownedPokemon[i].pokemon.pokemonStats.SpeedStat;
+                    enemyName = gymB.ownedPokemon[i].pokemon.PName;
+                    enemyHPForeground.fillAmount = enemyFullHealth;
+                    enemyLevel = gymB.ownedPokemon[i].pokemon.level;
+                    enemyType = gymB.ownedPokemon[i].pokemon.type;
+                    attackStatEnemy = gymB.ownedPokemon[i].pokemon.pokemonStats.AttackStat;
+                    specAttackStatEnemy = gymB.ownedPokemon[i].pokemon.pokemonStats.SpAttackStat;
+                    defenseStatEnemy = gymB.ownedPokemon[i].pokemon.pokemonStats.DefenceStat;
+                    specDefenseStatEnemy = gymB.ownedPokemon[i].pokemon.pokemonStats.SpDefenceStat;
+
+                    // player.ownedPokemon[i].moves
+                    // Move1.text = ;
+                    i++;
+            }
+
+        }
+        
 
         //---------------Player---------------------
         //Setting players pokemon to attack podium
