@@ -45,7 +45,7 @@ public class LongGrass : MonoBehaviour
                 if (gm != null)
                 {
                     raritySet = Rarity.VeryRare;
-                    gm.setBattleType(0);
+                    gm.setBattleType(1);
                     gm.EnterBattle();
                     print("Rarity set OnTriggerEnter: " + raritySet);
                     triggered = true;
@@ -56,7 +56,7 @@ public class LongGrass : MonoBehaviour
                 if (gm != null)
                 {
                     raritySet = Rarity.Rare;
-                    gm.setBattleType(0);
+                    gm.setBattleType(1);
                     gm.EnterBattle();
                     print("Rarity set OnTriggerEnter: " + raritySet);
                     triggered = true;
@@ -67,7 +67,7 @@ public class LongGrass : MonoBehaviour
                 if (gm != null)
                 {
                     raritySet = Rarity.SemiRare;
-                    gm.setBattleType(0);
+                    gm.setBattleType(1);
                     gm.EnterBattle();
                     print("Rarity set OnTriggerEnter: " + raritySet);
                     triggered = true;
@@ -78,7 +78,7 @@ public class LongGrass : MonoBehaviour
                 if (gm != null)
                 {
                     raritySet = Rarity.Common;
-                    gm.setBattleType(0);
+                    gm.setBattleType(1);
                     gm.EnterBattle();
                     print("Rarity set OnTriggerEnter: " + raritySet);
                     triggered = true;
@@ -91,7 +91,7 @@ public class LongGrass : MonoBehaviour
                 {
                     Debug.Log("very common");
                     raritySet = Rarity.VeryCommon;
-                    gm.setBattleType(0);
+                    gm.setBattleType(1);
                     gm.EnterBattle();
                     print("Rarity set OnTriggerEnter: " + raritySet);
                     triggered = true;

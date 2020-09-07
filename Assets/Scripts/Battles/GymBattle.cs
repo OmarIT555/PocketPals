@@ -10,14 +10,19 @@ public class GymBattle : MonoBehaviour
     public List<OwnedPokemon> ownedPokemon = new List<OwnedPokemon>();
     private GameManager gm;
     public Text signText;
-    public string text;
+    public Sprite gymLeader;
+    public string introBattleText;
+    public string introText;
+    public string defeatText;
     public bool active;
+    public bool beaten;
 
 
     // Start is called before the first frame update
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        beaten = false;
     }
 
     // Update is called once per frame
@@ -25,20 +30,27 @@ public class GymBattle : MonoBehaviour
     {
 
 
-        if (Input.GetButtonDown("Fire1") && active)
+        if (Input.GetButtonDown("Fire1") && active && gm.getBattleType() == 0)
         {
 
 
-            if (sign.activeInHierarchy)
+            if (sign.activeInHierarchy && beaten == false)
             {
                 sign.SetActive(false);
-                gm.setBattleType(1);
+                gm.setBattleType(2);
                 gm.EnterBattle();
             }
             else
             {
                 sign.SetActive(true);
-                signText.text = text;
+                if (beaten == false)
+                {
+                    signText.text = introText;
+                } else
+                {
+                    signText.text = defeatText;
+                }
+                
 
             }
 
@@ -90,4 +102,21 @@ public class GymBattle : MonoBehaviour
             return s;
         }
     }
+
+        public String getIntro()
+    {
+        return introBattleText;
+    }
+
+
+    public Sprite getGymLeader()
+    {
+        return gymLeader;
+    }
+
+    public void setBeaten(bool temp)
+    {
+        beaten = temp;
+    }
+
 }

@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour {
     // private MenuController mc;
 
 	void Start () {
+        battleType = 0;
         checkBattle = false;
         bm = GetComponent<BattleManager>();
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -65,6 +66,7 @@ public class GameManager : MonoBehaviour {
 
     public void ExitBattle() {
         checkBattle = false;
+        battleType = 0;
         SceneManager.UnloadSceneAsync("Battle_Scene");
         Time.timeScale = 1f;
     }

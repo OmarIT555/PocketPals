@@ -6555,8 +6555,12 @@ MonoBehaviour:
       power: 0
       accuracy: 100
   signText: {fileID: 1627101222}
-  text: 'Austin: I''m the buff beef boy gym leader. Let''s get this started!'
+  gymLeader: {fileID: 21300000, guid: ad337804747d99643a644aaffbead321, type: 3}
+  introBattleText: 'Austin: I am the fighting gym leader! Prepare to lose!'
+  introText: 'Austin: I am beef boy Austin, welcome to the fighting gym!'
+  defeatText: 'Austin: Good Job on beating me. I wish you luck on future gyms!'
   active: 0
+  beaten: 0
 --- !u!1001 &1084954124
 PrefabInstance:
   m_ObjectHideFlags: 0

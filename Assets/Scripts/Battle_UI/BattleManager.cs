@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,11 +11,13 @@ public class BattleManager : MonoBehaviour
     //need to get the player script from the scene that started the battle
     public Player player;
 
+    public bool test;
     public BattleMenu currentMenu;
     public BattleMessageType currentMessageType;
     [Header("Selection")]
     public GameObject SelectionMenu;
     public GameObject SelectionInfo;
+    public GameObject dPoke;
     public GymBattle gymB;
     public Text SelectionInfoText;
     public Text fight;
@@ -147,27 +150,35 @@ public class BattleManager : MonoBehaviour
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        if (gm.getBattleType() == 0)
+        battleType = gm.getBattleType();
+        if (battleType == 1)
         {
             lg = GameObject.FindGameObjectWithTag("Long_Grass").GetComponent<LongGrass>();
             rarityBM = lg.raritySet;
         }
-        else if (gm.getBattleType() == 1)
+        else if (battleType == 2)
         {
             gymB = GameObject.FindGameObjectWithTag("GymLeader").GetComponent<GymBattle>();
         }
         player = GameObject.Find("Player").GetComponent<Player>();
-        battleType = gm.getBattleType();
         print(player);
-        changeMenu(BattleMenu.Selection);
+        //changeMenu(BattleMenu.Selection);
 
         // loadBattle(rarity);
         currentSelection = 1;
+        test = true;
         Debug.Log(rarityBM);
         loadBattle(rarityBM);
+        if (battleType == 1)
+        {
+            updateMessageStatus("A wild " + enemyName + " has appeared.");
+        }
+        if (battleType == 2) {
+            updateMessageStatus(gymB.getIntro());
+        }
         enemyCurHealth = enemyHealth;
         playerCurHealth = playerHealth;
-        updateBattleStatus();
+        //updateBattleStatus();
     }
 
     // Update is called once per frame
@@ -203,25 +214,38 @@ public class BattleManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
-            if (currentSelection < 4)
+            if (currentSelection < 3)
             {
+                currentSelection++;
                 currentSelection++;
                 Debug.Log(currentSelection);
             }
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
-            if (currentSelection > 0)
+            if (currentSelection > 2)
             {
-                if (currentSelection == 0)
-                    currentSelection = 1;
-                else
-                    currentSelection--;
+                 currentSelection--;
+                 currentSelection--;
                 Debug.Log(currentSelection);
             }
         }
-        if (currentSelection == 0)
-            currentSelection = 1;
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+        {
+            if (currentSelection%2 == 1)
+            {
+                currentSelection++;
+                Debug.Log(currentSelection);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+        {
+            if (currentSelection%2 == 0)
+            {
+                currentSelection--;
+                Debug.Log(currentSelection);
+            }
+        }
 
 
         switch (currentMenu)
@@ -237,7 +261,7 @@ public class BattleManager : MonoBehaviour
                         //setting move1 stats
                         PP.text = Move1PPDisplay;
                         pType.text = Move1Type.ToString();
-                        if (Input.GetKeyDown(KeyCode.Return))
+                        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
                             Debug.Log("Move1 Selected");
                             battle(move1Power, Move1Category, Move1Type, move1Power);
@@ -257,7 +281,7 @@ public class BattleManager : MonoBehaviour
                         //setting move2 stats
                         PP.text = Move2PPDisplay;
                         pType.text = Move2Type.ToString();
-                        if (Input.GetKeyDown(KeyCode.Return))
+                        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
                             Debug.Log("Move2 Selected");
                             battle(move2Power, Move2Category, Move2Type, move2Power);
@@ -275,7 +299,7 @@ public class BattleManager : MonoBehaviour
                         //setting move3 stats
                         PP.text = Move3PPDisplay;
                         pType.text = Move3Type.ToString();
-                        if (Input.GetKeyDown(KeyCode.Return))
+                        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
                             Debug.Log("Move3 Selected");
                             battle(move3Power, Move3Category, Move3Type, move3Power);
@@ -293,7 +317,7 @@ public class BattleManager : MonoBehaviour
                         //setting move4 stats
                         PP.text = Move4PPDisplay;
                         pType.text = Move4Type.ToString();
-                        if (Input.GetKeyDown(KeyCode.Return))
+                        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
                             Debug.Log("Move4 Selected");
                             battle(move4Power, Move4Category, Move4Type, move4Power);
@@ -310,11 +334,16 @@ public class BattleManager : MonoBehaviour
                 {
                     case 1:
                         // Debug.Log("can fight");
+                        if (test && battleType == 2)
+                        {
+                            dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[i].pokemon.image;
+                            test = false;
+                        }
                         fight.text = fightSelected; //Arrow here
                         bag.text = bagUnSelected;
                         pokemon.text = pokemonUnSelected;
                         run.text = runUnSelected;
-                        if (Input.GetKeyDown(KeyCode.Return))
+                        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
 
                             changeMenu(BattleMenu.Fight);
@@ -326,7 +355,7 @@ public class BattleManager : MonoBehaviour
                         bag.text = bagSelected; //Arrow here
                         pokemon.text = pokemonUnSelected;
                         run.text = runUnSelected;
-                        if (Input.GetKeyDown(KeyCode.Return))
+                        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
                             // changeMenu(BattleMenu.Bag);
                             Debug.Log("can go to bag");
@@ -338,7 +367,7 @@ public class BattleManager : MonoBehaviour
                         bag.text = bagUnSelected;
                         pokemon.text = pokemonSelected; //Arrow here
                         run.text = runUnSelected;
-                        if (Input.GetKeyDown(KeyCode.Return))
+                        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
                             // changeMenu(BattleMenu.Pokemon);
                             Debug.Log("can change pokemon");
@@ -351,9 +380,23 @@ public class BattleManager : MonoBehaviour
                         pokemon.text = pokemonUnSelected;
                         run.text = runSelected; //Arrow here
                         // gm.ExitBattle();
-                        if (Input.GetKeyDown(KeyCode.Return))
+                        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1") && battleType == 1) 
                         {
                             gm.ExitBattle();
+                        }  else if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
+                        {
+                            updateMessageStatus("You cannot run from this battle.");
+                        }
+                        break;
+                }
+                break;
+            case BattleMenu.Info:
+                switch (currentSelection)
+                {
+                    case 1:
+                        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
+                        {
+                            changeMenu(BattleMenu.Selection);
                         }
                         break;
                 }
@@ -460,8 +503,8 @@ public class BattleManager : MonoBehaviour
     public void loadBattle(Rarity rarity)
     {
 
-        changeMenu(BattleMenu.Selection);
-        if (battleType == 0)
+        
+        if (battleType == 1)
         {
             print("wildPokemon count: " + lg.wildPokemon.Count);
             // print("ownedPokemon count: "+player.ownedPokemon.Count);
@@ -475,7 +518,7 @@ public class BattleManager : MonoBehaviour
             WildPokemon battlePokemon = lg.wildPokemon[j];
 
             // Debug.Log(battlePokemon.name);
-            GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
+            dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
 
             dPoke.transform.parent = defencePodium;
 
@@ -498,12 +541,12 @@ public class BattleManager : MonoBehaviour
         }
 
         //Testing Gymbattles
-        else if (battleType == 1)
+        else if (battleType == 2)
         {
 
 
             // Debug.Log(battlePokemon.name);
-            GameObject dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
+            dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
 
             dPoke.transform.parent = defencePodium;
 
@@ -518,7 +561,8 @@ public class BattleManager : MonoBehaviour
 
                 tempDefPoke.AddMember(gymB.ownedPokemon[i].pokemon);
                 tempDefPoke.transform.localScale += gymB.ownedPokemon[i].pokemon.scalePos;
-                dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[i].pokemon.image;
+                dPoke.GetComponent<SpriteRenderer>().sprite = gymB.getGymLeader();
+                //dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[i].pokemon.image;
                 enemyHealth = gymB.ownedPokemon[i].pokemon.HP;
                 enemyFullHealth = gymB.ownedPokemon[i].pokemon.FullHP;
                 enemySpeed = gymB.ownedPokemon[i].pokemon.pokemonStats.SpeedStat;
@@ -652,6 +696,7 @@ public class BattleManager : MonoBehaviour
         tempAtkPoke.transform.localScale += player.ownedPokemon[i].pokemon.scalePos;
         tempAtkPoke.transform.position += player.ownedPokemon[i].pokemon.pos;
         updateBattleStatus();
+        updateInfoStatus();
 
 
 
@@ -675,7 +720,7 @@ public class BattleManager : MonoBehaviour
         float enemyAttack;
 
 
-        if (battleType == 0)
+        if (battleType == 1)
         {
             k = Random.Range(0, lg.wildPokemon[j].moves.Count);
             //----------------------------------------------------
@@ -684,7 +729,7 @@ public class BattleManager : MonoBehaviour
             lg.wildPokemon[j].moves[k].currentPP--;
             //-----------------------------------------------------
         }
-        else if (battleType == 1)
+        else if (battleType == 2)
         {
             k = Random.Range(0, gymB.ownedPokemon[j].moves.Count);
             //----------------------------------------------------
@@ -705,7 +750,7 @@ public class BattleManager : MonoBehaviour
         if (playerSpeed >= enemySpeed)
         { //player speed > enemy speed
 
-            if (battleType == 0)
+            if (battleType == 1)
             {
                 //player Attack
                 if (type == MoveType.Physical)
@@ -774,7 +819,7 @@ public class BattleManager : MonoBehaviour
                     }
                 }
             }
-            else if (battleType == 1)
+            else if (battleType == 2)
             {
                 if (type == MoveType.Physical)
                 {
@@ -966,7 +1011,7 @@ public class BattleManager : MonoBehaviour
 
 
         //updating player status
-        playerPokemonName.text = playerName;
+        playerPokemonName.text = playerName.ToString();
         playerPokemonLevel.text = playerLevel.ToString();
         if (playerHealth < 0)
         {
@@ -1032,7 +1077,9 @@ public class BattleManager : MonoBehaviour
     {
         //selection info - info panel
         changeMenu(BattleMenu.Selection);
-        SelectionInfoText.text = "What will " + playerPokemonName + " do?";
+        Debug.Log(playerPokemonName.text);
+        string temp = "What will " + playerPokemonName.text + " do?";
+        SelectionInfoText.text = temp;
     }
 
     //should be called at start and end of battle
@@ -1053,6 +1100,10 @@ public class BattleManager : MonoBehaviour
     }
     void enemyFainted()
     {
+        if (battleType == 2)
+        {
+            gymB.setBeaten(true);
+        }
         Debug.Log("Enemy Fainted");
         //need to add experience gained and update player stats
         player.ownedPokemon[i].pokemon.HP = (int)playerHealth;
