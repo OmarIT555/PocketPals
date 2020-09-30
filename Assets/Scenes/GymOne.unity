@@ -6532,7 +6532,7 @@ MonoBehaviour:
   - NickName: 
     pokemon: {fileID: 5900891777610994904, guid: f6554920830d16244a265f1f3b4765f7,
       type: 3}
-    basePokemonID: 15
+    basePokemonID: 1
     moves:
     - Name: Chop
       category: 0

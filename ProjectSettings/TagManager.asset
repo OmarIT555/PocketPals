@@ -16,6 +16,7 @@ TagManager:
   - Exit
   - Music
   - GymLeader
+  - Trainer
   layers:
   - Default
   - TransparentFX

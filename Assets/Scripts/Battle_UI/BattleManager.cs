@@ -19,6 +19,7 @@ public class BattleManager : MonoBehaviour
     public GameObject SelectionInfo;
     public GameObject dPoke;
     public GymBattle gymB;
+    public Trainer trainer;
     public Text SelectionInfoText;
     public Text fight;
     private string fightSelected = "> Fight";
@@ -160,6 +161,17 @@ public class BattleManager : MonoBehaviour
         {
             gymB = GameObject.FindGameObjectWithTag("GymLeader").GetComponent<GymBattle>();
         }
+        else if (battleType == 3)
+        {
+            GameObject[] trainerList = GameObject.FindGameObjectsWithTag("Trainer");
+            for (int i = 0; i < trainerList.Length; i++)
+            {
+                if (trainerList[i].GetComponent<Trainer>().getTrainerID() == gm.getTrainer())
+                {
+                    trainer = trainerList[i].GetComponent<Trainer>();
+                }
+            }
+        }
         player = GameObject.Find("Player").GetComponent<Player>();
         print(player);
         //changeMenu(BattleMenu.Selection);
@@ -173,8 +185,13 @@ public class BattleManager : MonoBehaviour
         {
             updateMessageStatus("A wild " + enemyName + " has appeared.");
         }
-        if (battleType == 2) {
+        if (battleType == 2)
+        {
             updateMessageStatus(gymB.getIntro());
+        }
+        if (battleType == 3)
+        {
+            updateMessageStatus(trainer.getIntro());
         }
         enemyCurHealth = enemyHealth;
         playerCurHealth = playerHealth;
@@ -225,14 +242,14 @@ public class BattleManager : MonoBehaviour
         {
             if (currentSelection > 2)
             {
-                 currentSelection--;
-                 currentSelection--;
+                currentSelection--;
+                currentSelection--;
                 Debug.Log(currentSelection);
             }
         }
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
-            if (currentSelection%2 == 1)
+            if (currentSelection % 2 == 1)
             {
                 currentSelection++;
                 Debug.Log(currentSelection);
@@ -240,7 +257,7 @@ public class BattleManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
-            if (currentSelection%2 == 0)
+            if (currentSelection % 2 == 0)
             {
                 currentSelection--;
                 Debug.Log(currentSelection);
@@ -339,6 +356,11 @@ public class BattleManager : MonoBehaviour
                             dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[i].pokemon.image;
                             test = false;
                         }
+                        if (test && battleType == 3)
+                        {
+                            dPoke.GetComponent<SpriteRenderer>().sprite = trainer.ownedPokemon[i].pokemon.image;
+                            test = false;
+                        }
                         fight.text = fightSelected; //Arrow here
                         bag.text = bagUnSelected;
                         pokemon.text = pokemonUnSelected;
@@ -380,10 +402,11 @@ public class BattleManager : MonoBehaviour
                         pokemon.text = pokemonUnSelected;
                         run.text = runSelected; //Arrow here
                         // gm.ExitBattle();
-                        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1") && battleType == 1) 
+                        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1") && battleType == 1)
                         {
                             gm.ExitBattle();
-                        }  else if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
+                        }
+                        else if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
                             updateMessageStatus("You cannot run from this battle.");
                         }
@@ -503,7 +526,7 @@ public class BattleManager : MonoBehaviour
     public void loadBattle(Rarity rarity)
     {
 
-        
+
         if (battleType == 1)
         {
             print("wildPokemon count: " + lg.wildPokemon.Count);
@@ -574,6 +597,46 @@ public class BattleManager : MonoBehaviour
                 specAttackStatEnemy = gymB.ownedPokemon[i].pokemon.pokemonStats.SpAttackStat;
                 defenseStatEnemy = gymB.ownedPokemon[i].pokemon.pokemonStats.DefenceStat;
                 specDefenseStatEnemy = gymB.ownedPokemon[i].pokemon.pokemonStats.SpDefenceStat;
+
+                // player.ownedPokemon[i].moves
+                // Move1.text = ;
+                i++;
+            }
+
+        }
+        else if (battleType == 3)
+        {
+
+
+            // Debug.Log(battlePokemon.name);
+            dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
+
+            dPoke.transform.parent = defencePodium;
+
+            BasePokemon tempDefPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
+
+
+            i = 0;
+            print("ownedPokemon count: " + trainer.ownedPokemon.Count);
+            while (i < trainer.ownedPokemon.Count)
+            {
+                print(trainer.ownedPokemon[i].pokemon.name);
+
+                tempDefPoke.AddMember(trainer.ownedPokemon[i].pokemon);
+                tempDefPoke.transform.localScale += trainer.ownedPokemon[i].pokemon.scalePos;
+                dPoke.GetComponent<SpriteRenderer>().sprite = trainer.getGymLeader();
+                //dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[i].pokemon.image;
+                enemyHealth = trainer.ownedPokemon[i].pokemon.HP;
+                enemyFullHealth = trainer.ownedPokemon[i].pokemon.FullHP;
+                enemySpeed = trainer.ownedPokemon[i].pokemon.pokemonStats.SpeedStat;
+                enemyName = trainer.ownedPokemon[i].pokemon.PName;
+                enemyHPForeground.fillAmount = enemyFullHealth;
+                enemyLevel = trainer.ownedPokemon[i].pokemon.level;
+                enemyType = trainer.ownedPokemon[i].pokemon.type;
+                attackStatEnemy = trainer.ownedPokemon[i].pokemon.pokemonStats.AttackStat;
+                specAttackStatEnemy = trainer.ownedPokemon[i].pokemon.pokemonStats.SpAttackStat;
+                defenseStatEnemy = trainer.ownedPokemon[i].pokemon.pokemonStats.DefenceStat;
+                specDefenseStatEnemy = trainer.ownedPokemon[i].pokemon.pokemonStats.SpDefenceStat;
 
                 // player.ownedPokemon[i].moves
                 // Move1.text = ;
@@ -738,6 +801,15 @@ public class BattleManager : MonoBehaviour
             gymB.ownedPokemon[j].moves[k].currentPP--;
             //-----------------------------------------------------
         }
+        else if (battleType == 3)
+        {
+            k = Random.Range(0, trainer.ownedPokemon[j].moves.Count);
+            //----------------------------------------------------
+            //need to rework this to check it the current PP of a move != 0
+            enemyAttack = trainer.ownedPokemon[j].moves[k].power;
+            trainer.ownedPokemon[j].moves[k].currentPP--;
+            //-----------------------------------------------------
+        }
 
 
 
@@ -746,11 +818,10 @@ public class BattleManager : MonoBehaviour
         enemyCurHealth = enemyHealth;
         playerCurHealth = playerHealth;
 
-
-        if (playerSpeed >= enemySpeed)
+        if (battleType == 1)
         { //player speed > enemy speed
 
-            if (battleType == 1)
+            if (playerSpeed >= enemySpeed)
             {
                 //player Attack
                 if (type == MoveType.Physical)
@@ -819,7 +890,10 @@ public class BattleManager : MonoBehaviour
                     }
                 }
             }
-            else if (battleType == 2)
+        }
+        else if (battleType == 2)
+        {
+            if (playerSpeed >= enemySpeed)
             {
                 if (type == MoveType.Physical)
                 {
@@ -887,9 +961,81 @@ public class BattleManager : MonoBehaviour
                     }
                 }
             }
-            updateBattleStatus();
             // enemyHasAttacked = true;
         }
+        else if (battleType == 3)
+        {
+            if (playerSpeed >= enemySpeed)
+            {
+                if (type == MoveType.Physical)
+                {
+
+                    enemyHealth -= calcDamage(playerLevel, type, moveType, playerType, attackStat, pow, defenseStatEnemy, enemyType);
+                    print("player attacked");
+                    updateEnemyHealthBar(enemyHealth);
+                }
+                else if (type == MoveType.Special)
+                {
+                    enemyHealth -= calcDamage(playerLevel, type, moveType, playerType, specAttackStat, pow, specDefenseStatEnemy, enemyType);
+                    print("player attacked");
+                    updateEnemyHealthBar(enemyHealth);
+                }
+
+                if (enemyHealth >= 0)
+                {
+                    if (trainer.ownedPokemon[j].moves[k].category == MoveType.Physical)
+                    {
+                        playerHealth -= calcDamage(enemyLevel, trainer.ownedPokemon[j].moves[k].category, trainer.ownedPokemon[j].moves[k].moveType, enemyType, attackStatEnemy, trainer.ownedPokemon[j].moves[k].power, defenseStat, playerType);
+                        print("enemy attacked");
+                        updatePlayerHealthBar(playerHealth);
+                    }
+                    else if (trainer.ownedPokemon[j].moves[k].category == MoveType.Special)
+                    {
+                        playerHealth -= calcDamage(enemyLevel, trainer.ownedPokemon[j].moves[k].category, trainer.ownedPokemon[j].moves[k].moveType, enemyType, specAttackStatEnemy, trainer.ownedPokemon[j].moves[k].power, specDefenseStat, playerType);
+                        print("enemy attacked");
+                        updatePlayerHealthBar(playerHealth);
+                    }
+                }
+                print("EnemyHealth" + enemyHealth);
+                updateBattleStatus();
+                // playerHasAttacked = true;
+
+            }
+            else if (playerSpeed < enemySpeed)
+            { //player speed < enemy speed
+              //add enemy  attack code
+                if (trainer.ownedPokemon[j].moves[k].category == MoveType.Physical)
+                {
+                    playerHealth -= calcDamage(enemyLevel, trainer.ownedPokemon[j].moves[k].category, trainer.ownedPokemon[j].moves[k].moveType, enemyType, attackStatEnemy, trainer.ownedPokemon[j].moves[k].power, defenseStat, playerType);
+                    print("enemy attacked");
+                    updatePlayerHealthBar(playerHealth);
+                }
+                else if (trainer.ownedPokemon[j].moves[k].category == MoveType.Special)
+                {
+                    playerHealth -= calcDamage(enemyLevel, trainer.ownedPokemon[j].moves[k].category, trainer.ownedPokemon[j].moves[k].moveType, enemyType, specAttackStatEnemy, trainer.ownedPokemon[j].moves[k].power, specDefenseStat, playerType);
+                    print("enemy attacked");
+                    updatePlayerHealthBar(playerHealth);
+                }
+                print("PlayerHealth" + playerHealth);
+                if (playerHealth > 0)
+                {
+                    if (type == MoveType.Physical)
+                    {
+                        enemyHealth -= calcDamage(playerLevel, type, moveType, playerType, attackStat, pow, defenseStatEnemy, enemyType);
+                        print("player attacked");
+                        updateEnemyHealthBar(enemyHealth);
+                    }
+                    else if (type == MoveType.Special)
+                    {
+                        enemyHealth -= calcDamage(playerLevel, type, moveType, playerType, specAttackStat, pow, specDefenseStatEnemy, enemyType);
+                        print("player attacked");
+                        updateEnemyHealthBar(enemyHealth);
+                    }
+                }
+            }
+            // enemyHasAttacked = true;
+        }
+        updateBattleStatus();
         // if(playerHasAttacked) {
         //     if(lg.wildPokemon[j].moves[k].category == MoveType.Physical) {
         //         playerHealth -= calcDamage(enemyLevel,lg.wildPokemon[j].moves[k].category,lg.wildPokemon[j].moves[k].moveType,enemyType,attackStatEnemy,pow,defenseStat,playerType);
@@ -1103,6 +1249,10 @@ public class BattleManager : MonoBehaviour
         if (battleType == 2)
         {
             gymB.setBeaten(true);
+        }
+        if (battleType == 3)
+        {
+            trainer.setBeaten(true);
         }
         Debug.Log("Enemy Fainted");
         //need to add experience gained and update player stats

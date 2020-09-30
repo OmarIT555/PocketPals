@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
     Player player;
     int i = 1;
     int battleType;
+    int trainer;
 
     public GameObject menu;
     public static bool checkBattle;
@@ -123,6 +124,16 @@ public class GameManager : MonoBehaviour {
     public int getBattleType()
     {
         return battleType;
+    }
+
+    public void setTrainer(int trainer)
+    {
+        this.trainer = trainer;
+    }
+
+    public int getTrainer()
+    {
+        return trainer;
     }
 
     public WildPokemon GetRandomPokemonFromList(List<WildPokemon> pokeList)
