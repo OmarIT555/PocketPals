@@ -17,6 +17,8 @@ TagManager:
   - Music
   - GymLeader
   - Trainer
+  - CliffsDown
+  - Animation
   layers:
   - Default
   - TransparentFX

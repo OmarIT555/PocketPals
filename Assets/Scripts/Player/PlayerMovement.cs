@@ -118,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 change;
     public Animator Ani;
     public bool canMove;
+    public bool isJumping = false;
 
 
     // Start is called before the first frame update
@@ -136,6 +137,9 @@ public class PlayerMovement : MonoBehaviour
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
+        
+        
+
     }
 
     // Update is united to framerate and updates 50 times per second
@@ -143,6 +147,8 @@ public class PlayerMovement : MonoBehaviour
     {
         AnimateMove();
         StopMovement();
+        //cliffJumping();
+        
     }
 
     public void StopMovement()
@@ -158,11 +164,44 @@ public class PlayerMovement : MonoBehaviour
             myRigidBod.constraints = RigidbodyConstraints2D.FreezePosition;
             CanNotMove();
         }
-        else
+        if (GameObject.FindGameObjectWithTag("Animation"))
+        {
+            
+            //myRigidBod.constraints = RigidbodyConstraints2D.FreezePosition;
+            //CanNotMove();
+            jumpDown();
+        }
+        else {
+            canMove = true;
+        }
+
+
+        /*else
         {
             myRigidBod.constraints = RigidbodyConstraints2D.FreezeRotation;
             AnimateMove();
+        }*/
+    }
+
+    /*void cliffJumping()
+    {
+        //Collider2D[] bob = myRigidBod.GetAttachedColliders();
+        if (myRigidBod.CompareTag("CliffsDown"))
+        {
+            Ani.SetTrigger("isJumpingTrigger");
         }
+        
+    }*/
+
+    void jumpDown()
+    {
+         Ani.SetBool("isJumping", true);
+         Ani.Play("Jump");
+         change.y = -1;
+         change.x = 0;
+         myRigidBod.MovePosition( transform.position + change * speed * Time.deltaTime );
+            
+        
     }
 
 
@@ -170,6 +209,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canMove && change != Vector3.zero)
         {
+            Ani.SetBool("isJumping", false);
             Move();
             Ani.SetFloat("inputX", change.x);
             Ani.SetFloat("inputY", change.y);
@@ -180,6 +220,8 @@ public class PlayerMovement : MonoBehaviour
             Ani.SetBool("moving", false);
         }
     }
+
+
     void Move()
     {
 
@@ -190,6 +232,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void CanNotMove()
     {
+        canMove = false;
         Ani.SetFloat("inputX", 0);
         Ani.SetFloat("inputY", 0);
         Ani.SetBool("moving", false);
