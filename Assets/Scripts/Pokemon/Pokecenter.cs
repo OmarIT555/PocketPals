@@ -33,7 +33,10 @@ public class Pokecenter : MonoBehaviour
             }
             else
             {
-                player.ownedPokemon[0].pokemon.HP = (int)playerFullHealth;
+                for (int x = 0; x < player.ownedPokemon.Count; x++)
+                {
+                    player.ownedPokemon[x].pokemon.HP = (int)player.ownedPokemon[x].pokemon.FullHP;
+                }
                 poke.SetActive(true);
                 speechText.text = text;
 

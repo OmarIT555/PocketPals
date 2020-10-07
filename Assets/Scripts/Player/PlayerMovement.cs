@@ -164,6 +164,11 @@ public class PlayerMovement : MonoBehaviour
             myRigidBod.constraints = RigidbodyConstraints2D.FreezePosition;
             CanNotMove();
         }
+        else
+        {
+            myRigidBod.constraints = RigidbodyConstraints2D.FreezeRotation;
+            AnimateMove();
+        }
         if (GameObject.FindGameObjectWithTag("Animation"))
         {
             

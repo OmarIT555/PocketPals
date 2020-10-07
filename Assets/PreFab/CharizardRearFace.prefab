@@ -99,7 +99,7 @@ MonoBehaviour:
   biomeFound: 0
   type: 0
   rarity: 4
-  HP: 45
+  HP: 0
   FullHP: 45
   maxHP: 200
   AttackStat:
@@ -108,6 +108,7 @@ MonoBehaviour:
   DefenceStat:
     minimum: 0
     maximum: 0
+  currentStatusEffect: 0
   pokemonStats:
     AttackStat: 49
     DefenceStat: 49
