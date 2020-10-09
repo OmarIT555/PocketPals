@@ -181,7 +181,7 @@ public class BattleManager : MonoBehaviour
         // loadBattle(rarity);
         currentSelection = 1;
         test = true;
-        Debug.Log(currentSelection);
+        //Debug.Log(currentSelection);
         loadBattle(rarityBM);
         if (battleType == 1)
         {
@@ -237,7 +237,6 @@ public class BattleManager : MonoBehaviour
             {
                 currentSelection++;
                 currentSelection++;
-                Debug.Log(currentSelection);
             }
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
@@ -246,7 +245,6 @@ public class BattleManager : MonoBehaviour
             {
                 currentSelection--;
                 currentSelection--;
-                Debug.Log(currentSelection);
             }
         }
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
@@ -254,7 +252,6 @@ public class BattleManager : MonoBehaviour
             if (currentSelection % 2 == 1)
             {
                 currentSelection++;
-                Debug.Log(currentSelection);
             }
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
@@ -262,7 +259,6 @@ public class BattleManager : MonoBehaviour
             if (currentSelection % 2 == 0)
             {
                 currentSelection--;
-                Debug.Log(currentSelection);
             }
         }
 
@@ -282,7 +278,6 @@ public class BattleManager : MonoBehaviour
                         pType.text = Move1Type.ToString();
                         if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
-                            Debug.Log("Move1 Selected");
                             battle(move1Power, Move1Category, Move1Type, move1Power);
                         }
                         else if (Input.GetKeyDown(KeyCode.Escape))
@@ -302,7 +297,6 @@ public class BattleManager : MonoBehaviour
                         pType.text = Move2Type.ToString();
                         if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
-                            Debug.Log("Move2 Selected");
                             battle(move2Power, Move2Category, Move2Type, move2Power);
                         }
                         else if (Input.GetKeyDown(KeyCode.Escape))
@@ -320,7 +314,6 @@ public class BattleManager : MonoBehaviour
                         pType.text = Move3Type.ToString();
                         if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
-                            Debug.Log("Move3 Selected");
                             battle(move3Power, Move3Category, Move3Type, move3Power);
                         }
                         else if (Input.GetKeyDown(KeyCode.Escape))
@@ -338,7 +331,6 @@ public class BattleManager : MonoBehaviour
                         pType.text = Move4Type.ToString();
                         if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
-                            Debug.Log("Move4 Selected");
                             battle(move4Power, Move4Category, Move4Type, move4Power);
                         }
                         else if (Input.GetKeyDown(KeyCode.Escape))
@@ -382,7 +374,7 @@ public class BattleManager : MonoBehaviour
                         if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
                             // changeMenu(BattleMenu.Bag);
-                            Debug.Log("can go to bag");
+                            //Debug.Log("can go to bag");
                         }
                         break;
                     case 3:
@@ -394,7 +386,7 @@ public class BattleManager : MonoBehaviour
                         if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
                             // changeMenu(BattleMenu.Pokemon);
-                            Debug.Log("can change pokemon");
+                            //Debug.Log("can change pokemon");
                         }
                         break;
                     case 4:
@@ -416,16 +408,11 @@ public class BattleManager : MonoBehaviour
                 }
                 break;
             case BattleMenu.Info:
-                switch (currentSelection)
-                {
-                    case 1:
                         if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire1"))
                         {
                             changeMenu(BattleMenu.Selection);
                         }
                         break;
-                }
-                break;
         }
     }
 
@@ -665,7 +652,7 @@ public class BattleManager : MonoBehaviour
             print(player.ownedPokemon[i].pokemon.name);
             if (healthRemaining(i))
             {
-                Debug.Log("i: " + i + " " + player.ownedPokemon[i].pokemon.image);
+                //Debug.Log("i: " + i + " " + player.ownedPokemon[i].pokemon.image);
                 tempAtkPoke.AddMember(player.ownedPokemon[i].pokemon);
                 tempAtkPoke.transform.localScale += player.ownedPokemon[i].pokemon.scalePos;
                 tempAtkPoke.transform.position += player.ownedPokemon[i].pokemon.pos;
@@ -1207,7 +1194,7 @@ public class BattleManager : MonoBehaviour
         //need to create method when both faint at same time
         if (playerHealth <= 0 && enemyHealth <= 0)
         {
-            Debug.Log("Both Pokemon Fainted");
+            //Debug.Log("Both Pokemon Fainted");
             playerFainted();
         }
         else if (enemyHealth <= 0)
@@ -1225,7 +1212,7 @@ public class BattleManager : MonoBehaviour
                     count++;
                 }
             }
-            Debug.Log("var: " + count + " ownedpoke: " + player.ownedPokemon.Count);
+            //Debug.Log("var: " + count + " ownedpoke: " + player.ownedPokemon.Count);
             if (count == player.ownedPokemon.Count)
             {
                 playerFainted();
@@ -1247,7 +1234,7 @@ public class BattleManager : MonoBehaviour
     {
         //selection info - info panel
         changeMenu(BattleMenu.Selection);
-        Debug.Log(playerPokemonName.text);
+        //Debug.Log(playerPokemonName.text);
         string temp = "What will " + playerPokemonName.text + " do?";
         SelectionInfoText.text = temp;
     }
@@ -1266,7 +1253,7 @@ public class BattleManager : MonoBehaviour
     }
     void bothFainted()
     {
-        Debug.Log("Both Pokemon Fainted");
+        //Debug.Log("Both Pokemon Fainted");
     }
     void enemyFainted()
     {
@@ -1278,7 +1265,7 @@ public class BattleManager : MonoBehaviour
         {
             trainer.setBeaten(true);
         }
-        Debug.Log("Enemy Fainted");
+        //Debug.Log("Enemy Fainted");
         //need to add experience gained and update player stats
         player.ownedPokemon[i].pokemon.HP = (int)playerHealth;
         //Move1
@@ -1323,7 +1310,7 @@ public class BattleManager : MonoBehaviour
     void playerFainted()
     {
 
-        Debug.Log("Player Fainted");
+        //Debug.Log("Player Fainted");
         changeMenu(BattleMenu.Info);
         //set Info menu to print out that enemy fainted
 
