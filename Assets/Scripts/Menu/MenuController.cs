@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
 
-    public GameObject inventory;
+    //public GameObject inventory;
+    public GameObject UI_Inventory;
     Player player;
     public Text inventoryText;
     public GameObject menuUI;
@@ -47,6 +48,7 @@ public class MenuController : MonoBehaviour
         // player = GetComponent<Player>();
         player = GameObject.Find("Player").GetComponent<Player>();
         currentSelection = 1;
+       
 
     }
 
@@ -196,10 +198,13 @@ public class MenuController : MonoBehaviour
     {
         Debug.Log("Go to Party");
     }
+
+    public bool inventoryUIup = false;
     public void goToBag()
     {
-        inventory.SetActive(true);
+        //inventory.SetActive(true);
         Debug.Log("Go to Bag");
+        SceneManager.LoadScene("InventoryScene");
 
     }
     public void goToTrainerCard()
