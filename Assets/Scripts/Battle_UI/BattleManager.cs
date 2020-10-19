@@ -349,13 +349,11 @@ public class BattleManager : MonoBehaviour
                         // Debug.Log("can fight");
                         if (test && battleType == 2)
                         {
-                            dPoke.GetComponent<SpriteRenderer>().sprite = null;
                             dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[z].pokemon.image;
                             test = false;
                         }
                         if (test && battleType == 3)
                         {
-                            dPoke.GetComponent<SpriteRenderer>().sprite = null;
                             dPoke.GetComponent<SpriteRenderer>().sprite = trainer.ownedPokemon[z].pokemon.image;
                             test = false;
                         }
@@ -654,15 +652,15 @@ public class BattleManager : MonoBehaviour
 
         if (!test && battleType == 2)
         {
-            dPoke.GetComponent<SpriteRenderer>().sprite = null;
+            //dPoke.GetComponent<SpriteRenderer>().sprite = null;
             dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[z].pokemon.image;
-            test = false;
+            //test = false;
         }
         if (!test && battleType == 3)
         {
-            dPoke.GetComponent<SpriteRenderer>().sprite = null;
+            //dPoke.GetComponent<SpriteRenderer>().sprite = null;
             dPoke.GetComponent<SpriteRenderer>().sprite = trainer.ownedPokemon[z].pokemon.image;
-            test = false;
+            //test = false;
         }
 
         //---------------Player---------------------
@@ -875,7 +873,7 @@ public class BattleManager : MonoBehaviour
                     }
                 }
                 print("EnemyHealth" + enemyHealth);
-                updateBattleStatus();
+                //updateBattleStatus();
                 // playerHasAttacked = true;
 
             }
@@ -946,7 +944,7 @@ public class BattleManager : MonoBehaviour
                     }
                 }
                 print("EnemyHealth" + enemyHealth);
-                updateBattleStatus();
+                //updateBattleStatus();
                 // playerHasAttacked = true;
 
             }
@@ -1018,7 +1016,7 @@ public class BattleManager : MonoBehaviour
                     }
                 }
                 print("EnemyHealth" + enemyHealth);
-                updateBattleStatus();
+                //updateBattleStatus();
                 // playerHasAttacked = true;
 
             }
@@ -1236,6 +1234,7 @@ public class BattleManager : MonoBehaviour
             if (battleType == 2)
             {
                 int count = 0;
+                gymB.ownedPokemon[z].pokemon.HP = (int)enemyHealth;
                 for (int x = 0; x < gymB.ownedPokemon.Count; x++)
                 {
                     if (gymB.ownedPokemon[x].pokemon.HP == 0)
@@ -1253,13 +1252,15 @@ public class BattleManager : MonoBehaviour
                 }
                 else
                 {
-                    gymB.ownedPokemon[z].pokemon.HP = 0;
+                    dPoke.GetComponent<SpriteRenderer>().sprite = null;
+                    //gymB.ownedPokemon[z].pokemon.HP = 0;
                     loadBattle(rarityBM);
                 }
             }
             if (battleType == 3)
             {
                 int count = 0;
+                trainer.ownedPokemon[z].pokemon.HP = (int)enemyHealth;
                 for (int x = 0; x < trainer.ownedPokemon.Count; x++)
                 {
                     if (trainer.ownedPokemon[x].pokemon.HP == 0)
@@ -1272,13 +1273,14 @@ public class BattleManager : MonoBehaviour
                     for (int x = 0; x < trainer.ownedPokemon.Count; x++)
                     {
                         trainer.ownedPokemon[x].pokemon.HP = trainer.ownedPokemon[x].pokemon.FullHP;
+                        Debug.Log("Poke: " + trainer.ownedPokemon[x].pokemon.name + "Health: " + trainer.ownedPokemon[x].pokemon.HP);
                     }
                     enemyFainted();
                 }
                 else
                 {
-                    Debug.Log("Trainer num: " + z);
-                    trainer.ownedPokemon[z].pokemon.HP = 0;
+                    dPoke.GetComponent<SpriteRenderer>().sprite = null;
+                    //trainer.ownedPokemon[z].pokemon.HP = 0;
                     loadBattle(rarityBM);
                 }
             }
@@ -1342,6 +1344,7 @@ public class BattleManager : MonoBehaviour
     }
     void enemyFainted()
     {
+        Debug.Log("Enemy Fainted");
         if (battleType == 2)
         {
             gymB.setBeaten(true);
@@ -1354,6 +1357,7 @@ public class BattleManager : MonoBehaviour
         //need to add experience gained and update player stats
         player.ownedPokemon[i].pokemon.HP = (int)playerHealth;
         //Move1
+
         if (player.ownedPokemon[i].moves[0].Name != null)
         {
             player.ownedPokemon[i].moves[0].currentPP = Move1CurPP;
