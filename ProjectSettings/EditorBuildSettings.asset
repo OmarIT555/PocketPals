@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/Menu_PreStart.unity
-    guid: 328320ccae315aa468f3db5142282474
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu/PreStart.unity
     guid: 7dd8d8055488a404ca1abd39bb32855b
@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Battle_Scene.unity
     guid: 6f19e43edf0f5124da137a1799309bd8
+  - enabled: 1
+    path: Assets/Inventory/Inventory_Scene.unity
+    guid: 153c3f7e9a1cb124abf1ca0a84383694
+  - enabled: 0
+    path: Assets/Inventory/InventoryScene.unity
+    guid: 396d72c475c86d841876a0bc37498bab
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
