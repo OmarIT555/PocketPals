@@ -14,6 +14,8 @@ public class Player : MonoBehaviour {
     public string player_Name;
     public int numBadges;
     public int numPokemonOwned;
+    public int numPokeBall;
+    public int numPotion;
 
     [SerializeField] private UI_Inventory uiInventory;
 
@@ -66,6 +68,26 @@ public class Player : MonoBehaviour {
         
         ItemWorld.spawnPokeBall(new Vector3(0, 1), new Item { itemType = Item.ItemType.Pokeball, amount = 1 });
         ItemWorld.spawnPokeBall(new Vector3(1, 2), new Item { itemType = Item.ItemType.Pokeball, amount = 1 });
+    }
+
+    public void addPokeball()
+    {
+        numPokeBall++;
+    }
+
+    public int getnumPokeBall()
+    {
+        return numPokeBall;
+    }
+
+    public void addPotion()
+    {
+        numPotion++;
+    }
+
+    public int getnumPotion()
+    {
+        return numPotion;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)

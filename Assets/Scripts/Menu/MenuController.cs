@@ -204,7 +204,7 @@ public class MenuController : MonoBehaviour
     {
         //inventory.SetActive(true);
         Debug.Log("Go to Bag");
-        SceneManager.LoadScene("InventoryScene");
+        SceneManager.LoadSceneAsync("Inventory_Scene", LoadSceneMode.Additive);
 
     }
     public void goToTrainerCard()
