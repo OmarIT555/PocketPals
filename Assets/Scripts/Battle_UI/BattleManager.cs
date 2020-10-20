@@ -127,8 +127,8 @@ public class BattleManager : MonoBehaviour
     public Rarity rarityBM;
     private LongGrass lg;
 
-    int i = 0;
-    int z = 0;
+    int i;
+    int z;
     int j;
     int k;
     double typeMultiplier;
@@ -152,6 +152,8 @@ public class BattleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        i = 0;
+        z = 0;
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         battleType = gm.getBattleType();
         if (battleType == 1)
@@ -515,8 +517,11 @@ public class BattleManager : MonoBehaviour
     public void loadBattle(Rarity rarity)
     {
 
+        dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
 
-        if (battleType == 1 && i == 0)
+        dPoke.transform.parent = defencePodium;
+
+        if (battleType == 1)
         {
             print("wildPokemon count: " + lg.wildPokemon.Count);
             // print("ownedPokemon count: "+player.ownedPokemon.Count);
@@ -530,14 +535,10 @@ public class BattleManager : MonoBehaviour
             WildPokemon battlePokemon = lg.wildPokemon[j];
 
             // Debug.Log(battlePokemon.name);
-            dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
-
-            dPoke.transform.parent = defencePodium;
 
             BasePokemon tempDefPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
             tempDefPoke.AddMember(battlePokemon.pokemon);
             tempDefPoke.transform.localScale += battlePokemon.pokemon.scalePos;
-
             dPoke.GetComponent<SpriteRenderer>().sprite = battlePokemon.pokemon.image;
             enemyHealth = battlePokemon.pokemon.HP;
             enemyFullHealth = battlePokemon.pokemon.FullHP;
@@ -553,87 +554,114 @@ public class BattleManager : MonoBehaviour
         }
 
         //Testing Gymbattles
-        else if (battleType == 2 && i == 0)
+        else if (battleType == 2)
         {
 
 
             // Debug.Log(battlePokemon.name);
-            dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
-
-            dPoke.transform.parent = defencePodium;
 
             BasePokemon tempDefPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
 
 
-            z = 0;
+            //z = 0;
             print("ownedPokemon count: " + gymB.ownedPokemon.Count);
             while (z < gymB.ownedPokemon.Count)
             {
                 print(gymB.ownedPokemon[z].pokemon.name);
 
-                tempDefPoke.AddMember(gymB.ownedPokemon[z].pokemon);
-                tempDefPoke.transform.localScale += gymB.ownedPokemon[z].pokemon.scalePos;
-                dPoke.GetComponent<SpriteRenderer>().sprite = gymB.getGymLeader();
-                enemyHealth = gymB.ownedPokemon[z].pokemon.HP;
-                enemyFullHealth = gymB.ownedPokemon[z].pokemon.FullHP;
-                //dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[i].pokemon.image;
-                enemySpeed = gymB.ownedPokemon[z].pokemon.pokemonStats.SpeedStat;
-                enemyName = gymB.ownedPokemon[z].pokemon.PName;
-                enemyHPForeground.fillAmount = enemyFullHealth;
-                enemyLevel = gymB.ownedPokemon[z].pokemon.level;
-                enemyType = gymB.ownedPokemon[z].pokemon.type;
-                attackStatEnemy = gymB.ownedPokemon[z].pokemon.pokemonStats.AttackStat;
-                specAttackStatEnemy = gymB.ownedPokemon[z].pokemon.pokemonStats.SpAttackStat;
-                defenseStatEnemy = gymB.ownedPokemon[z].pokemon.pokemonStats.DefenceStat;
-                specDefenseStatEnemy = gymB.ownedPokemon[z].pokemon.pokemonStats.SpDefenceStat;
+                if (gymB.ownedPokemon[z].pokemon.HP != 0)
+                {
+                    tempDefPoke.AddMember(gymB.ownedPokemon[z].pokemon);
+                    tempDefPoke.transform.localScale += gymB.ownedPokemon[z].pokemon.scalePos;
+                    if (test)
+                    {
+                        dPoke.GetComponent<SpriteRenderer>().sprite = gymB.getGymLeader();
+                    }
+                    enemyHealth = gymB.ownedPokemon[z].pokemon.HP;
+                    enemyFullHealth = gymB.ownedPokemon[z].pokemon.FullHP;
+                    //dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[i].pokemon.image;
+                    enemySpeed = gymB.ownedPokemon[z].pokemon.pokemonStats.SpeedStat;
+                    enemyName = gymB.ownedPokemon[z].pokemon.PName;
+                    enemyHPForeground.fillAmount = enemyFullHealth;
+                    enemyLevel = gymB.ownedPokemon[z].pokemon.level;
+                    enemyType = gymB.ownedPokemon[z].pokemon.type;
+                    attackStatEnemy = gymB.ownedPokemon[z].pokemon.pokemonStats.AttackStat;
+                    specAttackStatEnemy = gymB.ownedPokemon[z].pokemon.pokemonStats.SpAttackStat;
+                    defenseStatEnemy = gymB.ownedPokemon[z].pokemon.pokemonStats.DefenceStat;
+                    specDefenseStatEnemy = gymB.ownedPokemon[z].pokemon.pokemonStats.SpDefenceStat;
 
-                // player.ownedPokemon[i].moves
-                // Move1.text = ;
-                z++;
+                    // player.ownedPokemon[i].moves
+                    // Move1.text = ;
+                    break;
+                }
+                else
+                {
+                    z++;
+                }
             }
 
         }
-        else if (battleType == 3 && i == 0)
+        else if (battleType == 3)
         {
 
 
             // Debug.Log(battlePokemon.name);
-            dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
-
-            dPoke.transform.parent = defencePodium;
 
             BasePokemon tempDefPoke = dPoke.AddComponent<BasePokemon>() as BasePokemon;
 
 
-            z = 0;
+            //z = 0;
             print("ownedPokemon count: " + trainer.ownedPokemon.Count);
             while (z < trainer.ownedPokemon.Count)
             {
                 print(trainer.ownedPokemon[z].pokemon.name);
 
-                tempDefPoke.AddMember(trainer.ownedPokemon[z].pokemon);
-                tempDefPoke.transform.localScale += trainer.ownedPokemon[z].pokemon.scalePos;
-                dPoke.GetComponent<SpriteRenderer>().sprite = trainer.getGymLeader();
-                enemyHealth = trainer.ownedPokemon[z].pokemon.HP;
-                enemyFullHealth = trainer.ownedPokemon[z].pokemon.FullHP;
-                //dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[i].pokemon.image;
-                enemySpeed = trainer.ownedPokemon[z].pokemon.pokemonStats.SpeedStat;
-                enemyName = trainer.ownedPokemon[z].pokemon.PName;
-                enemyHPForeground.fillAmount = enemyFullHealth;
-                enemyLevel = trainer.ownedPokemon[z].pokemon.level;
-                enemyType = trainer.ownedPokemon[z].pokemon.type;
-                attackStatEnemy = trainer.ownedPokemon[z].pokemon.pokemonStats.AttackStat;
-                specAttackStatEnemy = trainer.ownedPokemon[z].pokemon.pokemonStats.SpAttackStat;
-                defenseStatEnemy = trainer.ownedPokemon[z].pokemon.pokemonStats.DefenceStat;
-                specDefenseStatEnemy = trainer.ownedPokemon[z].pokemon.pokemonStats.SpDefenceStat;
+                if (trainer.ownedPokemon[z].pokemon.HP != 0)
+                {
 
-                // player.ownedPokemon[i].moves
-                // Move1.text = ;
-                z++;
+                    tempDefPoke.AddMember(trainer.ownedPokemon[z].pokemon);
+                    tempDefPoke.transform.localScale += trainer.ownedPokemon[z].pokemon.scalePos;
+                    if (test)
+                    {
+                        dPoke.GetComponent<SpriteRenderer>().sprite = trainer.getGymLeader();
+                    }
+                    enemyHealth = trainer.ownedPokemon[z].pokemon.HP;
+                    enemyFullHealth = trainer.ownedPokemon[z].pokemon.FullHP;
+                    //dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[i].pokemon.image;
+                    enemySpeed = trainer.ownedPokemon[z].pokemon.pokemonStats.SpeedStat;
+                    enemyName = trainer.ownedPokemon[z].pokemon.PName;
+                    enemyHPForeground.fillAmount = enemyFullHealth;
+                    enemyLevel = trainer.ownedPokemon[z].pokemon.level;
+                    enemyType = trainer.ownedPokemon[z].pokemon.type;
+                    attackStatEnemy = trainer.ownedPokemon[z].pokemon.pokemonStats.AttackStat;
+                    specAttackStatEnemy = trainer.ownedPokemon[z].pokemon.pokemonStats.SpAttackStat;
+                    defenseStatEnemy = trainer.ownedPokemon[z].pokemon.pokemonStats.DefenceStat;
+                    specDefenseStatEnemy = trainer.ownedPokemon[z].pokemon.pokemonStats.SpDefenceStat;
+
+                    // player.ownedPokemon[i].moves
+                    // Move1.text = ;
+                    break;
+                }
+                else
+                {
+                    z++;
+                }
             }
 
         }
 
+        if (!test && battleType == 2)
+        {
+            //dPoke.GetComponent<SpriteRenderer>().sprite = null;
+            dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[z].pokemon.image;
+            //test = false;
+        }
+        if (!test && battleType == 3)
+        {
+            //dPoke.GetComponent<SpriteRenderer>().sprite = null;
+            dPoke.GetComponent<SpriteRenderer>().sprite = trainer.ownedPokemon[z].pokemon.image;
+            //test = false;
+        }
 
         //---------------Player---------------------
         //Setting players pokemon to attack podium
@@ -747,7 +775,7 @@ public class BattleManager : MonoBehaviour
                 i++;
             }
         }
-        z = 0;
+        //z = 0;
         updatePlayerHealthBar(playerHealth);
         updateBattleStatus();
         updateInfoStatus();
@@ -845,7 +873,7 @@ public class BattleManager : MonoBehaviour
                     }
                 }
                 print("EnemyHealth" + enemyHealth);
-                updateBattleStatus();
+                //updateBattleStatus();
                 // playerHasAttacked = true;
 
             }
@@ -916,7 +944,7 @@ public class BattleManager : MonoBehaviour
                     }
                 }
                 print("EnemyHealth" + enemyHealth);
-                updateBattleStatus();
+                //updateBattleStatus();
                 // playerHasAttacked = true;
 
             }
@@ -988,7 +1016,7 @@ public class BattleManager : MonoBehaviour
                     }
                 }
                 print("EnemyHealth" + enemyHealth);
-                updateBattleStatus();
+                //updateBattleStatus();
                 // playerHasAttacked = true;
 
             }
@@ -1199,8 +1227,67 @@ public class BattleManager : MonoBehaviour
         }
         else if (enemyHealth <= 0)
         {
-
-            enemyFainted();
+            if (battleType == 1)
+            {
+                enemyFainted();
+            } 
+            if (battleType == 2)
+            {
+                int count = 0;
+                gymB.ownedPokemon[z].pokemon.HP = (int)enemyHealth;
+                for (int x = 0; x < gymB.ownedPokemon.Count; x++)
+                {
+                    if (gymB.ownedPokemon[x].pokemon.HP == 0)
+                    {
+                        count++;
+                    }
+                }
+                if (count == gymB.ownedPokemon.Count)
+                {
+                    for (int x = 0; x < gymB.ownedPokemon.Count; x++)
+                    {
+                        gymB.ownedPokemon[x].pokemon.HP = gymB.ownedPokemon[x].pokemon.FullHP;
+                    }
+                    enemyFainted();
+                }
+                else
+                {
+                    dPoke.GetComponent<SpriteRenderer>().sprite = null;
+                    //gymB.ownedPokemon[z].pokemon.HP = 0;
+                    loadBattle(rarityBM);
+                }
+            }
+            if (battleType == 3)
+            {
+                int count = 0;
+                trainer.ownedPokemon[z].pokemon.HP = (int)enemyHealth;
+                for (int x = 0; x < trainer.ownedPokemon.Count; x++)
+                {
+                    if (trainer.ownedPokemon[x].pokemon.HP == 0)
+                    {
+                        count++;
+                    }
+                }
+                if (count == trainer.ownedPokemon.Count)
+                {
+                    for (int x = 0; x < trainer.ownedPokemon.Count; x++)
+                    {
+                        trainer.ownedPokemon[x].pokemon.HP = trainer.ownedPokemon[x].pokemon.FullHP;
+                        Debug.Log("Poke: " + trainer.ownedPokemon[x].pokemon.name + "Health: " + trainer.ownedPokemon[x].pokemon.HP);
+                    }
+                    enemyFainted();
+                }
+                else
+                {
+                    dPoke.GetComponent<SpriteRenderer>().sprite = null;
+                    //trainer.ownedPokemon[z].pokemon.HP = 0;
+                    loadBattle(rarityBM);
+                }
+            }
+            else
+            {
+                enemyFainted();
+            }
         }
         else if (playerHealth <= 0)
         {
@@ -1257,6 +1344,7 @@ public class BattleManager : MonoBehaviour
     }
     void enemyFainted()
     {
+        Debug.Log("Enemy Fainted");
         if (battleType == 2)
         {
             gymB.setBeaten(true);
@@ -1269,6 +1357,7 @@ public class BattleManager : MonoBehaviour
         //need to add experience gained and update player stats
         player.ownedPokemon[i].pokemon.HP = (int)playerHealth;
         //Move1
+
         if (player.ownedPokemon[i].moves[0].Name != null)
         {
             player.ownedPokemon[i].moves[0].currentPP = Move1CurPP;
