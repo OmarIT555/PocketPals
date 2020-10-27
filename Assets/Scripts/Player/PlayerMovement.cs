@@ -119,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator Ani;
     public bool canMove;
     public bool isJumping = false;
-
+    public VectorValue startingPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -127,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
         Ani = GetComponent<Animator>();
         myRigidBod = GetComponent<Rigidbody2D>();
         canMove = true;
-
+        transform.position = startingPosition.initialValue;
     }
 
 
