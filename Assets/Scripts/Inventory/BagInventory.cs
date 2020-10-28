@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BagInventory : MonoBehaviour
 {
     public GameObject inventory;
+    public Inventory inventoryOther;
     public Text inventoryText;
     public string text;
     
@@ -39,6 +40,7 @@ public class BagInventory : MonoBehaviour
                 Destroy(gameObject);
                 pokeball++;
                 CountBall();
+                inventoryOther.addItem(new Item { itemType = Item.ItemType.Pokeball, amount = 1 });
                 // print(inventory);
             }
         }

@@ -36,7 +36,7 @@ public class ExitPlayerHome : MonoBehaviour
     {
 
         //SceneManager.LoadSceneAsync("OverWorld");
-        SceneManager.UnloadSceneAsync("HouseInterior1");
+        SceneManager.UnloadSceneAsync("Home");
 
 
     }

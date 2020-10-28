@@ -108,6 +108,7 @@ MonoBehaviour:
   DefenceStat:
     minimum: 49
     maximum: 70
+  currentStatusEffect: 0
   pokemonStats:
     AttackStat: 49
     DefenceStat: 49

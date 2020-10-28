@@ -5,15 +5,28 @@ using System.Collections.Generic;
 
 public class Player : MonoBehaviour {
 
+    
+    public Inventory inventory;
+
     public List<OwnedPokemon> ownedPokemon = new List<OwnedPokemon>();
     public int sceneIndex;
     public Time timeplayed;
     public string player_Name;
     public int numBadges;
     public int numPokemonOwned;
-    
+    public int numPokeBall;
+    public int numPotion;
 
-	void Start () {
+    [SerializeField] private UI_Inventory uiInventory;
+
+    /*private void Awake()
+    {
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
+    }
+    */
+
+    public void Start () {
         // sceneIndex = Scene.buildIndex();
         // OwnedPokemon p1 = new OwnedPokemon();
         // p1.level = 3;
@@ -50,9 +63,44 @@ public class Player : MonoBehaviour {
         // p2.NickName = "Lisa";
         // p2.basePokemonID = 27;
         // ownedPokemon.Add(p2);
-	}
-	
-	void Update () {
+
+
+        
+       // ItemWorld.spawnPokeBall(new Vector3(0, 1), new Item { itemType = Item.ItemType.Pokeball, amount = 1 });
+       // ItemWorld.spawnPokeBall(new Vector3(1, 2), new Item { itemType = Item.ItemType.Pokeball, amount = 1 });
+    }
+
+    public void addPokeball()
+    {
+        numPokeBall++;
+    }
+
+    public int getnumPokeBall()
+    {
+        return numPokeBall;
+    }
+
+    public void addPotion()
+    {
+        numPotion++;
+    }
+
+    public int getnumPotion()
+    {
+        return numPotion;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        ItemWorld pokeball = collider.GetComponent<ItemWorld>();
+        if (pokeball != null)
+        {
+            inventory.addItem(pokeball.getItem());
+            pokeball.destroySelf();
+        }
+    }
+
+    void Update () {
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
 	}
 
@@ -74,6 +122,7 @@ public class Player : MonoBehaviour {
     }
     
 }
+
 
 [System.Serializable]
 public class OwnedPokemon
