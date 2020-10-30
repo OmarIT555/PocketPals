@@ -517,6 +517,7 @@ public class BattleManager : MonoBehaviour
     public void loadBattle(Rarity rarity)
     {
 
+
         dPoke = Instantiate(emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
 
         dPoke.transform.parent = defencePodium;
@@ -662,6 +663,8 @@ public class BattleManager : MonoBehaviour
             dPoke.GetComponent<SpriteRenderer>().sprite = trainer.ownedPokemon[z].pokemon.image;
             //test = false;
         }
+
+        updateEnemyHealthBar(enemyHealth);
 
         //---------------Player---------------------
         //Setting players pokemon to attack podium

@@ -8,6 +8,6 @@ public class ReturnButton : MonoBehaviour
 {
     public void returnButton()
     {
-        SceneManager.LoadSceneAsync("OverWorld", LoadSceneMode.Single);
+        SceneManager.UnloadSceneAsync("Inventory_Scene");
     }
 }
