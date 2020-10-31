@@ -19,6 +19,7 @@ TagManager:
   - Trainer
   - CliffsDown
   - Animation
+  - GameMusic
   layers:
   - Default
   - TransparentFX
