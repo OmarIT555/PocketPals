@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class music : MonoBehaviour
 {
-    
+
+    public AudioSource BGM;
 
     void Awake()
     {
         GameObject[] musicObj = GameObject.FindGameObjectsWithTag("GameMusic");
+        BGM = this.GetComponent<AudioSource>();
         if (musicObj.Length > 1)
         {
             Destroy(this.gameObject);
@@ -18,5 +20,11 @@ public class music : MonoBehaviour
 
     }
 
+    public void ChangeBGM(AudioClip music)
+    {
+        BGM.Stop();
+        BGM.clip = music;
+        BGM.Play();
+    }
     
 }

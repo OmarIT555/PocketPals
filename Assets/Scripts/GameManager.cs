@@ -14,6 +14,14 @@ public class GameManager : MonoBehaviour {
     public List<WildPokemon> allPokemon = new List<WildPokemon>();
     public List<PokemonMoves> allMoves = new List<PokemonMoves>();
 
+    private music music;
+
+    public AudioClip grassBattle;
+    public AudioClip trainerBattle;
+    public AudioClip gymBattle;
+    public AudioClip overworld;
+
+
     // private Transform defencePodium;
     // private Transform attackPodium;
     // public GameObject emptyPoke;
@@ -35,6 +43,7 @@ public class GameManager : MonoBehaviour {
         checkBattle = false;
         bm = GetComponent<BattleManager>();
         player = GameObject.Find("Player").GetComponent<Player>();
+        music = FindObjectOfType<music>();
     }
 	
 	void Update () {
@@ -60,12 +69,26 @@ public class GameManager : MonoBehaviour {
 
     public void EnterBattle()
     {
+
+        if (battleType == 1)
+        {
+            music.ChangeBGM(grassBattle);
+        }
+        if (battleType == 2)
+        {
+            music.ChangeBGM(gymBattle);
+        }
+        if (battleType == 3)
+        {
+            music.ChangeBGM(trainerBattle);
+        }
         checkBattle = true;
         Time.timeScale = 0f;
         SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
     }
 
     public void ExitBattle() {
+        music.ChangeBGM(overworld);
         checkBattle = false;
         battleType = 0;
         SceneManager.UnloadSceneAsync("Battle_Scene");
