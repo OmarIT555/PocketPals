@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Inventory/Inventory_Scene.unity
     guid: 153c3f7e9a1cb124abf1ca0a84383694
   - enabled: 0
-    path: Assets/Inventory/InventoryScene.unity
+    path: 
     guid: 396d72c475c86d841876a0bc37498bab
   - enabled: 1
     path: Assets/Scenes/Home.unity
@@ -59,6 +59,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/House Internals/Forest of Strength Pokecenter.unity
     guid: f947efd98bcde4248b639069fc127595
+  - enabled: 1
+    path: Assets/Scenes/IceTown.unity
+    guid: b5359c9934ef38740a7cd303aeceb824
+  - enabled: 1
+    path: Assets/Scenes/forest.unity
+    guid: 6f2ffc5b48779284aadbc0c75542eebd
   - enabled: 1
     path: Assets/Scenes/House Internals/Forest of Strength Gym.unity
     guid: d957cb0c5537e3242adb17cd02793496
