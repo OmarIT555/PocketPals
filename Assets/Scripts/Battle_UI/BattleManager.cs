@@ -527,6 +527,7 @@ public class BattleManager : MonoBehaviour
             print("wildPokemon count: " + lg.wildPokemon.Count);
             // print("ownedPokemon count: "+player.ownedPokemon.Count);
             j = Random.Range(0, lg.wildPokemon.Count);
+            Debug.Log("J: " + j);
             // j=0;
             // print("Rarity loadBattle: " + rarity);
             //--------------Enemy----------------------
