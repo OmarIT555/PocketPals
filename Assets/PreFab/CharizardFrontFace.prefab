@@ -94,17 +94,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PName: Charizard
+  level: 15
   image: {fileID: 21300000, guid: f1cc7967b9940ae43ada71fdbf9dddfe, type: 3}
   biomeFound: 0
   type: 4
   rarity: 4
-  HP: 45
+  HP: 0
+  FullHP: 100
+  maxHP: 100
   AttackStat:
     minimum: 0
     maximum: 0
   DefenceStat:
     minimum: 0
     maximum: 0
+  currentStatusEffect: 0
   pokemonStats:
     AttackStat: 49
     DefenceStat: 49
@@ -116,3 +120,5 @@ MonoBehaviour:
   evolveTo:
     nextEvolution: {fileID: 0}
     levelUpLevel: 0
+  scalePos: {x: 0.4, y: 0.4, z: 0}
+  pos: {x: 0, y: 0.2, z: 0}

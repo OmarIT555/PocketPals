@@ -120,6 +120,211 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &4427262
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_Name
+      value: Austin (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -85.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 135.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 598f4f2ed7e620a4b8c19b12cca0f221,
+        type: 3}
+    - target: {fileID: 50354309302074784, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da7e1fa19d9fc4245b6b4d12b2d2a784, type: 3}
+--- !u!1 &4427263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+    type: 3}
+  m_PrefabInstance: {fileID: 4427262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4427264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4427263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f7ff672dd8b024b97f113ab2c982d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sign: {fileID: 1627101223}
+  ownedPokemon:
+  - NickName: Mankey
+    pokemon: {fileID: 5672179643844261084, guid: 1cb8db91386f83544a4d406e1b460518,
+      type: 3}
+    basePokemonID: 3
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 10
+        maximum: 20
+      moveType: 6
+      currentPP: 20
+      PP: 20
+      power: 40
+      accuracy: 90
+  signText: {fileID: 1627101222}
+  gymLeader: {fileID: 21300000, guid: 598f4f2ed7e620a4b8c19b12cca0f221, type: 3}
+  introBattleText: You won't make it the the gymleader.
+  introText: Prepare for battle!
+  defeatText: Wow, your way stronger than you look.
+  active: 0
+  beaten: 0
+  ID: 3
+--- !u!61 &4427265
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4427263}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00062076, y: 0.003899034}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.14, y: 0.19}
+    newSize: {x: 0.96875, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.14737447, y: 0.22205263}
+  m_EdgeRadius: 0
+--- !u!61 &4427266
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4427263}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05732149, y: -0.052787274}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.14, y: 0.19}
+    newSize: {x: 0.96875, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4668094, y: 0.42557454}
+  m_EdgeRadius: 0
 --- !u!1 &296798006
 GameObject:
   m_ObjectHideFlags: 0
@@ -6335,6 +6540,211 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 3, y: 2}
+  m_EdgeRadius: 0
+--- !u!1001 &746034653
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_Name
+      value: Austin (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -76.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 126.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2be6370c3e311a64fb283bab61b07bb9,
+        type: 3}
+    - target: {fileID: 50354309302074784, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da7e1fa19d9fc4245b6b4d12b2d2a784, type: 3}
+--- !u!1 &746034654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+    type: 3}
+  m_PrefabInstance: {fileID: 746034653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &746034655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746034654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f7ff672dd8b024b97f113ab2c982d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sign: {fileID: 1627101223}
+  ownedPokemon:
+  - NickName: Rattata
+    pokemon: {fileID: 5672179643844261084, guid: 22eb65352f949df4a8d26215c2a9dd59,
+      type: 3}
+    basePokemonID: 3
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 10
+        maximum: 20
+      moveType: 6
+      currentPP: 20
+      PP: 20
+      power: 40
+      accuracy: 90
+  signText: {fileID: 1627101222}
+  gymLeader: {fileID: 21300000, guid: 2be6370c3e311a64fb283bab61b07bb9, type: 3}
+  introBattleText: This is my first battle here.
+  introText: I cannot lose to you.
+  defeatText: Wow, I still have a lot of training to do.
+  active: 0
+  beaten: 0
+  ID: 4
+--- !u!61 &746034656
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746034654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00062076, y: 0.003899034}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.2}
+    newSize: {x: 0.96875, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.14737447, y: 0.22205263}
+  m_EdgeRadius: 0
+--- !u!61 &746034657
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746034654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05732149, y: -0.052787274}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.2}
+    newSize: {x: 0.96875, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4668094, y: 0.42557454}
   m_EdgeRadius: 0
 --- !u!1 &769176220
 GameObject:

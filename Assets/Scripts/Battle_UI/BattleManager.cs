@@ -232,7 +232,7 @@ public class BattleManager : MonoBehaviour
         //     HPForeground.rectTransform.localScale = new Vector3(playerHealth/playerFullHealth,1,1);
         //     // HPForeground.fillAmount = Mathf.Lerp(playerCurHealth/playerFullHealth,playerHealth/playerFullHealth, Time.deltaTime * 10f);
         // }
-        Debug.Log(currentSelection);
+//Debug.Log(currentSelection);
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             if (currentSelection < 3)
@@ -524,10 +524,10 @@ public class BattleManager : MonoBehaviour
 
         if (battleType == 1)
         {
-            print("wildPokemon count: " + lg.wildPokemon.Count);
+            //print("wildPokemon count: " + lg.wildPokemon.Count);
             // print("ownedPokemon count: "+player.ownedPokemon.Count);
             j = Random.Range(0, lg.wildPokemon.Count);
-            Debug.Log("J: " + j);
+            //Debug.Log("J: " + j);
             // j=0;
             // print("Rarity loadBattle: " + rarity);
             //--------------Enemy----------------------
@@ -566,7 +566,7 @@ public class BattleManager : MonoBehaviour
 
 
             //z = 0;
-            print("ownedPokemon count: " + gymB.ownedPokemon.Count);
+            //print("ownedPokemon count: " + gymB.ownedPokemon.Count);
             while (z < gymB.ownedPokemon.Count)
             {
                 print(gymB.ownedPokemon[z].pokemon.name);
@@ -613,7 +613,7 @@ public class BattleManager : MonoBehaviour
 
 
             //z = 0;
-            print("ownedPokemon count: " + trainer.ownedPokemon.Count);
+            //print("ownedPokemon count: " + trainer.ownedPokemon.Count);
             while (z < trainer.ownedPokemon.Count)
             {
                 print(trainer.ownedPokemon[z].pokemon.name);
@@ -654,13 +654,15 @@ public class BattleManager : MonoBehaviour
 
         if (!test && battleType == 2)
         {
-            //dPoke.GetComponent<SpriteRenderer>().sprite = null;
+            dPoke.GetComponent<SpriteRenderer>().sprite = null;
+            aPoke.GetComponent<SpriteRenderer>().sprite = player.ownedPokemon[i].pokemon.image;
             dPoke.GetComponent<SpriteRenderer>().sprite = gymB.ownedPokemon[z].pokemon.image;
             //test = false;
         }
         if (!test && battleType == 3)
         {
-            //dPoke.GetComponent<SpriteRenderer>().sprite = null;
+            dPoke.GetComponent<SpriteRenderer>().sprite = null;
+            aPoke.GetComponent<SpriteRenderer>().sprite = player.ownedPokemon[i].pokemon.image;
             dPoke.GetComponent<SpriteRenderer>().sprite = trainer.ownedPokemon[z].pokemon.image;
             //test = false;
         }
@@ -678,10 +680,10 @@ public class BattleManager : MonoBehaviour
         //if health is zero,check next and so on
         //if health is not zero, deploy pokemon
         //i = 0;
-        print("ownedPokemon count: " + player.ownedPokemon.Count);
+        //print("ownedPokemon count: " + player.ownedPokemon.Count);
         while (i < player.ownedPokemon.Count)
         {
-            print(player.ownedPokemon[i].pokemon.name);
+            //print(player.ownedPokemon[i].pokemon.name);
             if (healthRemaining(i))
             {
                 //Debug.Log("i: " + i + " " + player.ownedPokemon[i].pokemon.image);
@@ -735,7 +737,7 @@ public class BattleManager : MonoBehaviour
                 }
                 //Move3
                 //Need to add else condition for null
-                print(i + "," + player.ownedPokemon.Count + ",");
+                //print(i + "," + player.ownedPokemon.Count + ",");
                 if (player.ownedPokemon[i].moves[2].Name != null)
                 {
                     Move3.text = player.ownedPokemon[i].moves[2].Name;
@@ -1246,6 +1248,9 @@ public class BattleManager : MonoBehaviour
                         count++;
                     }
                 }
+
+                
+
                 if (count == gymB.ownedPokemon.Count)
                 {
                     for (int x = 0; x < gymB.ownedPokemon.Count; x++)
@@ -1277,7 +1282,7 @@ public class BattleManager : MonoBehaviour
                     for (int x = 0; x < trainer.ownedPokemon.Count; x++)
                     {
                         trainer.ownedPokemon[x].pokemon.HP = trainer.ownedPokemon[x].pokemon.FullHP;
-                        Debug.Log("Poke: " + trainer.ownedPokemon[x].pokemon.name + "Health: " + trainer.ownedPokemon[x].pokemon.HP);
+                       // Debug.Log("Poke: " + trainer.ownedPokemon[x].pokemon.name + "Health: " + trainer.ownedPokemon[x].pokemon.HP);
                     }
                     enemyFainted();
                 }
@@ -1290,12 +1295,14 @@ public class BattleManager : MonoBehaviour
             }
             else
             {
-                enemyFainted();
+                //Debug.Log("BattleType: " + battleType);
+               // enemyFainted();
             }
         }
         else if (playerHealth <= 0)
         {
             int count = 0;
+            player.ownedPokemon[i].pokemon.HP = (int)playerHealth;
             for (int x = 0; x < player.ownedPokemon.Count; x++)
             {
                 if (player.ownedPokemon[x].pokemon.HP == 0)
@@ -1303,7 +1310,6 @@ public class BattleManager : MonoBehaviour
                     count++;
                 }
             }
-            //Debug.Log("var: " + count + " ownedpoke: " + player.ownedPokemon.Count);
             if (count == player.ownedPokemon.Count)
             {
                 playerFainted();
@@ -1312,7 +1318,6 @@ public class BattleManager : MonoBehaviour
                 player.ownedPokemon[i].pokemon.HP = 0;
                 i++;
                 aPoke.GetComponent<SpriteRenderer>().sprite = null;
-                aPoke.GetComponent<SpriteRenderer>().sprite = player.ownedPokemon[i].pokemon.image;
                 loadBattle(rarityBM);
             } 
 
@@ -1348,7 +1353,6 @@ public class BattleManager : MonoBehaviour
     }
     void enemyFainted()
     {
-        Debug.Log("Enemy Fainted");
         if (battleType == 2)
         {
             gymB.setBeaten(true);
@@ -1406,6 +1410,23 @@ public class BattleManager : MonoBehaviour
         //Debug.Log("Player Fainted");
         changeMenu(BattleMenu.Info);
         //set Info menu to print out that enemy fainted
+
+        if (battleType == 2)
+        {
+            for (int x = 0; x < gymB.ownedPokemon.Count; x++)
+            {
+                gymB.ownedPokemon[x].pokemon.HP = gymB.ownedPokemon[x].pokemon.FullHP;
+                // Debug.Log("Poke: " + trainer.ownedPokemon[x].pokemon.name + "Health: " + trainer.ownedPokemon[x].pokemon.HP);
+            }
+        }
+        if (battleType == 3)
+        {
+            for (int x = 0; x < trainer.ownedPokemon.Count; x++)
+            {
+                trainer.ownedPokemon[x].pokemon.HP = trainer.ownedPokemon[x].pokemon.FullHP;
+                // Debug.Log("Poke: " + trainer.ownedPokemon[x].pokemon.name + "Health: " + trainer.ownedPokemon[x].pokemon.HP);
+            }
+        }
 
         for (int x = 0; x < player.ownedPokemon.Count; x++)
         {

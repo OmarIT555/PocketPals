@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PName: Bulbasaur
-  level: 10
+  level: 5
   image: {fileID: 21300000, guid: 3758d8af407a97546b2c4d4f81849853, type: 3}
   biomeFound: 0
   type: 2
@@ -103,18 +103,18 @@ MonoBehaviour:
   FullHP: 45
   maxHP: 200
   AttackStat:
-    minimum: 49
-    maximum: 70
+    minimum: 10
+    maximum: 30
   DefenceStat:
-    minimum: 49
-    maximum: 70
+    minimum: 10
+    maximum: 30
   currentStatusEffect: 0
   pokemonStats:
-    AttackStat: 49
-    DefenceStat: 49
-    SpeedStat: 45
-    SpAttackStat: 65
-    SpDefenceStat: 65
+    AttackStat: 20
+    DefenceStat: 20
+    SpeedStat: 15
+    SpAttackStat: 25
+    SpDefenceStat: 25
     EvasionStat: 0
   canEvolve: 1
   evolveTo:

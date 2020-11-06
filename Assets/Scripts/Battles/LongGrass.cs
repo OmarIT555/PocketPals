@@ -40,7 +40,7 @@ public class LongGrass : MonoBehaviour
         float p = Random.Range(0.0f, 100.0f);
         if (triggered == false)
         {
-            if (p < vr * 100)
+            if (p < vr * 300)
             {
                 if (gm != null)
                 {
@@ -51,7 +51,7 @@ public class LongGrass : MonoBehaviour
                     triggered = true;
                 }
             }
-            else if (p < r * 100)
+            else if (p < r * 300)
             {
                 if (gm != null)
                 {
@@ -62,7 +62,7 @@ public class LongGrass : MonoBehaviour
                     triggered = true;
                 }
             }
-            else if (p < sr * 100)
+            else if (p < sr * 300)
             {
                 if (gm != null)
                 {
@@ -73,7 +73,7 @@ public class LongGrass : MonoBehaviour
                     triggered = true;
                 }
             }
-            else if (p < c * 100)
+            else if (p < c * 300)
             {
                 if (gm != null)
                 {
@@ -85,7 +85,7 @@ public class LongGrass : MonoBehaviour
                 }
 
             }
-            else if (p < vc * 100)
+            else if (p < vc * 300)
             {
                 if (gm != null)
                 {
