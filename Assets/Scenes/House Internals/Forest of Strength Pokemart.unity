@@ -2353,6 +2353,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b7f785bc6f3a844aa3b39d5dc2e520, type: 3}
 --- !u!114 &767751903 stripped
@@ -2458,7 +2478,7 @@ PrefabInstance:
     - target: {fileID: 5160429906494103866, guid: 94b0007d8d2d9944d925aef00fb4b141,
         type: 3}
       propertyPath: text
-      value: Hi, our store is currently out of stock. I wish you luck on your adeventures.
+      value: Hi, our store is currently out of stock.
       objectReference: {fileID: 0}
     - target: {fileID: 5160429906494103866, guid: 94b0007d8d2d9944d925aef00fb4b141,
         type: 3}

@@ -393,7 +393,7 @@ PrefabInstance:
     - target: {fileID: 5160429906494103866, guid: 94b0007d8d2d9944d925aef00fb4b141,
         type: 3}
       propertyPath: text
-      value: Hi, our store is currently out of stock. I wish you luck on your adeventures.
+      value: Hi, our store is currently out of stock.
       objectReference: {fileID: 0}
     - target: {fileID: 5160429906494103866, guid: 94b0007d8d2d9944d925aef00fb4b141,
         type: 3}
