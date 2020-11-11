@@ -24,7 +24,7 @@ public class TextUpdate : MonoBehaviour
         bool placeholder = true; // <= temporary placeholder, change to a bool check that checks if the player has pokeballs in their inventory 
         //inventoryOther.addItem(new Item { itemType = Item.ItemType.Pokeball, amount = 1 }); //For testing, inventory needs to come from BagInventory
         if (placeholder == true) {
-            InventoryText.text = "Pokeball    x" + player.getnumPokeBall();
+            InventoryText.text = "PocketBall    x" + player.getnumPokeBall();
             InventoryText2.text = "Potion    x" + player.getnumPotion();
             //InventoryText.text = "Pokeball    x3"; // Place holder
         }
