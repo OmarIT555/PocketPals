@@ -37181,7 +37181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sign: {fileID: 203481677}
   ownedPokemon:
-  - NickName: Charizard
+  - NickName: Flying Fire Lizard
     pokemon: {fileID: 5900891777610994904, guid: 11894b1635aed49f5ac6e5c77cc525ce,
       type: 3}
     basePokemonID: 1
@@ -37196,7 +37196,7 @@ MonoBehaviour:
       PP: 40
       power: 80
       accuracy: 100
-  - NickName: Ivysaur
+  - NickName: IvyLeague
     pokemon: {fileID: 6876473659914758365, guid: 98c3fa9d0a9eba449a9f6b4de8e98ad9,
       type: 3}
     basePokemonID: 1
@@ -55385,7 +55385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sign: {fileID: 203481677}
   ownedPokemon:
-  - NickName: Charizard
+  - NickName: Flying Fire Lizard
     pokemon: {fileID: 5900891777610994904, guid: 11894b1635aed49f5ac6e5c77cc525ce,
       type: 3}
     basePokemonID: 1
@@ -55400,7 +55400,7 @@ MonoBehaviour:
       PP: 40
       power: 80
       accuracy: 100
-  - NickName: Primeape
+  - NickName: Gorilia
     pokemon: {fileID: 5672179643844261084, guid: ff6bfbbbf79b0374f9865283a17d17d1,
       type: 3}
     basePokemonID: 1
@@ -55415,7 +55415,7 @@ MonoBehaviour:
       PP: 40
       power: 80
       accuracy: 100
-  - NickName: Pidgeot
+  - NickName: Birdie
     pokemon: {fileID: 5672179643844261084, guid: 9bc0f7a49cbb0534293296638766f85c,
       type: 3}
     basePokemonID: 1

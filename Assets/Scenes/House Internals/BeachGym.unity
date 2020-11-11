@@ -2963,7 +2963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sign: {fileID: 1365275860}
   ownedPokemon:
-  - NickName: Croconaw
+  - NickName: Alligator
     pokemon: {fileID: 5672179643844261084, guid: 3e21358ebe49a244e8e9de8ac6694599,
       type: 3}
     basePokemonID: 1
@@ -2978,7 +2978,7 @@ MonoBehaviour:
       PP: 15
       power: 50
       accuracy: 100
-  - NickName: Squirtle
+  - NickName: Water Turtle
     pokemon: {fileID: 5672179643844261084, guid: b39ee2cdf74ef0d4fa4d42c57bcffa18,
       type: 3}
     basePokemonID: 1

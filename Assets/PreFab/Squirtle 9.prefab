@@ -93,13 +93,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8441b421e39168d4585705df7d2f86d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PName: Sceptile
+  PName: Mantis
   level: 20
   image: {fileID: 21300000, guid: ea32c03407cb8d5448e1c5e37b0e548c, type: 3}
   biomeFound: 0
   type: 2
   rarity: 0
-  HP: 120
+  HP: 59
   FullHP: 120
   maxHP: 120
   AttackStat:

@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8441b421e39168d4585705df7d2f86d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PName: Feraligatr
+  PName: FloridaGator
   level: 20
   image: {fileID: 21300000, guid: 6fe0b29a1209f8b4f8f46592d5738e01, type: 3}
   biomeFound: 0

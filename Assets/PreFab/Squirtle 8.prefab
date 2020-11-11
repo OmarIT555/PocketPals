@@ -93,13 +93,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8441b421e39168d4585705df7d2f86d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PName: Croconaw
+  PName: Alligator
   level: 15
   image: {fileID: 21300000, guid: f274f43fdf4e71b498c656e00202110f, type: 3}
   biomeFound: 0
   type: 1
   rarity: 0
-  HP: 70
+  HP: 0
   FullHP: 70
   maxHP: 70
   AttackStat:

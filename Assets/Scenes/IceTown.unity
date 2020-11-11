@@ -28580,7 +28580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sign: {fileID: 1354606667}
   ownedPokemon:
-  - NickName: Charizard
+  - NickName: Flying Fire Lizard
     pokemon: {fileID: 5900891777610994904, guid: 11894b1635aed49f5ac6e5c77cc525ce,
       type: 3}
     basePokemonID: 1
@@ -28595,7 +28595,7 @@ MonoBehaviour:
       PP: 15
       power: 50
       accuracy: 100
-  - NickName: Primeape
+  - NickName: Gorilia
     pokemon: {fileID: 5672179643844261084, guid: ff6bfbbbf79b0374f9865283a17d17d1,
       type: 3}
     basePokemonID: 1
@@ -28610,7 +28610,7 @@ MonoBehaviour:
       PP: 15
       power: 50
       accuracy: 100
-  - NickName: Venusaur
+  - NickName: Plant Life
     pokemon: {fileID: 2405054582829893953, guid: 519b6c2dd27077144b25a1f0b108093d,
       type: 3}
     basePokemonID: 1
@@ -28625,7 +28625,7 @@ MonoBehaviour:
       PP: 15
       power: 50
       accuracy: 100
-  - NickName: Pidgeot
+  - NickName: Birdie
     pokemon: {fileID: 5672179643844261084, guid: 9bc0f7a49cbb0534293296638766f85c,
       type: 3}
     basePokemonID: 1
@@ -28640,7 +28640,7 @@ MonoBehaviour:
       PP: 15
       power: 50
       accuracy: 100
-  - NickName: Feraligatr
+  - NickName: Flordia Gator
     pokemon: {fileID: 5672179643844261084, guid: 882bc041d9b34004fa4829d7dc83ec4d,
       type: 3}
     basePokemonID: 1
@@ -28655,7 +28655,7 @@ MonoBehaviour:
       PP: 15
       power: 50
       accuracy: 100
-  - NickName: Raticade
+  - NickName: Splinter
     pokemon: {fileID: 5672179643844261084, guid: 223f535083d56b842adcae53899e9c87,
       type: 3}
     basePokemonID: 1

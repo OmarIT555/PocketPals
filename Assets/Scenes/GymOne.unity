@@ -250,7 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sign: {fileID: 1627101223}
   ownedPokemon:
-  - NickName: Mankey
+  - NickName: Monkie
     pokemon: {fileID: 5672179643844261084, guid: 1cb8db91386f83544a4d406e1b460518,
       type: 3}
     basePokemonID: 3
@@ -290,7 +290,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.14, y: 0.19}
+    oldSize: {x: 0.16, y: 0.22}
     newSize: {x: 0.96875, y: 0.90625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -316,7 +316,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.14, y: 0.19}
+    oldSize: {x: 0.16, y: 0.22}
     newSize: {x: 0.96875, y: 0.90625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6671,7 +6671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sign: {fileID: 1627101223}
   ownedPokemon:
-  - NickName: Rattata
+  - NickName: Rat
     pokemon: {fileID: 5672179643844261084, guid: 22eb65352f949df4a8d26215c2a9dd59,
       type: 3}
     basePokemonID: 3
@@ -7011,7 +7011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sign: {fileID: 1627101223}
   ownedPokemon:
-  - NickName: 
+  - NickName: Muscle Kid
     pokemon: {fileID: 5900891777610994904, guid: f6554920830d16244a265f1f3b4765f7,
       type: 3}
     basePokemonID: 1

@@ -30494,7 +30494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sign: {fileID: 1409605733}
   ownedPokemon:
-  - NickName: Rattata
+  - NickName: Rat
     pokemon: {fileID: 5672179643844261084, guid: 22eb65352f949df4a8d26215c2a9dd59,
       type: 3}
     basePokemonID: 1
@@ -30509,7 +30509,7 @@ MonoBehaviour:
       PP: 15
       power: 50
       accuracy: 100
-  - NickName: Pidgeot
+  - NickName: Birdie
     pokemon: {fileID: 5672179643844261084, guid: 9bc0f7a49cbb0534293296638766f85c,
       type: 3}
     basePokemonID: 1

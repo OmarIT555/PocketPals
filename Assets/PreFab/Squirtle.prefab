@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8441b421e39168d4585705df7d2f86d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PName: Squirtle
+  PName: WaterTurtle
   level: 15
   image: {fileID: 21300012, guid: 3758d8af407a97546b2c4d4f81849853, type: 3}
   biomeFound: 0
