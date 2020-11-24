@@ -99,7 +99,7 @@ MonoBehaviour:
   biomeFound: 0
   type: 1
   rarity: 0
-  HP: 0
+  HP: 70
   FullHP: 70
   maxHP: 70
   AttackStat:
