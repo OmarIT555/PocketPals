@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
 
-    public GameObject inventory;
+    //public GameObject inventory;
+    public GameObject UI_Inventory;
     Player player;
     public Text inventoryText;
     public GameObject menuUI;
@@ -39,7 +40,7 @@ public class MenuController : MonoBehaviour
 
     private GameManager gm;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,116 +48,137 @@ public class MenuController : MonoBehaviour
         // player = GetComponent<Player>();
         player = GameObject.Find("Player").GetComponent<Player>();
         currentSelection = 1;
+       
 
     }
 
     // Update is called once per frame
     void Update()
     {
-       
 
-        if (menuUI.activeInHierarchy) {
-            if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
-                if(currentSelection<7) {
+
+        if (menuUI.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+            {
+                if (currentSelection < 7)
+                {
                     currentSelection++;
                     Debug.Log(currentSelection);
                 }
-            } 
-            if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) {
-                if(currentSelection>0) {
-                    if(currentSelection == 0)
+            }
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+            {
+                if (currentSelection > 0)
+                {
+                    if (currentSelection == 0)
                         currentSelection = 1;
                     else
                         currentSelection--;
                     Debug.Log(currentSelection);
                 }
             }
-            if(Input.GetKeyDown(KeyCode.E)) {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
                 gm.toggleMenuUI();
-                
+
             }
 
-            switch(currentSelection) {
-                    case 1:
-                        PokeDexTxt.text = PokeDexSelected; //Arrow here
-                        PokeTxt.text = PokeUnSelected;
-                        BagTxt.text = BagUnSelected;
-                        CardTxt.text = CardUnSelected;
-                        SaveTxt.text = SaveUnSelected;
-                        
-                        SettingsTxt.text = SetUnSelected;
-                        if(Input.GetKeyDown(KeyCode.Return)){
-                            goToPokeDex();
-                        } 
-                        break;
-                    case 2:
-                        PokeDexTxt.text = PokeDexUnSelected; 
-                        PokeTxt.text = PokeSelected;
-                        BagTxt.text = BagUnSelected;
-                        CardTxt.text = CardUnSelected;
-                        SaveTxt.text = SaveUnSelected;
-                        
-                        SettingsTxt.text = SetUnSelected;
-                        if(Input.GetKeyDown(KeyCode.Return)){
-                            goToPokeParty();
-                        } 
-                        break;
-                    case 3:
-                        PokeDexTxt.text = PokeDexUnSelected; 
-                        PokeTxt.text = PokeUnSelected;
-                        BagTxt.text = BagSelected;
-                        CardTxt.text = CardUnSelected;
-                        SaveTxt.text = SaveUnSelected;
-                        
-                        SettingsTxt.text = SetUnSelected;
-                        if(Input.GetKeyDown(KeyCode.Return)){
-                            goToBag();
-                        } 
-                        break;
-                    case 4:
-                        PokeDexTxt.text = PokeDexUnSelected; 
-                        PokeTxt.text = PokeUnSelected;
-                        BagTxt.text = BagUnSelected;
-                        CardTxt.text = CardSelected;
-                        SaveTxt.text = SaveUnSelected;
-                       
-                        SettingsTxt.text = SetUnSelected;
-                        if(Input.GetKeyDown(KeyCode.Return)){
-                            goToTrainerCard();
-                        } 
-                        break;
-                    case 5:
-                        PokeDexTxt.text = PokeDexUnSelected; 
-                        PokeTxt.text = PokeUnSelected;
-                        BagTxt.text = BagUnSelected;
-                        CardTxt.text = CardUnSelected;
-                        SaveTxt.text = SaveSelected;
-                        
-                        SettingsTxt.text = SetUnSelected;
-                        if(Input.GetKeyDown(KeyCode.Return)){
-                            player.SavePlayer();
-                        } 
-                        break;             
-                    case 6:
-                        PokeDexTxt.text = PokeDexUnSelected; 
-                        PokeTxt.text = PokeUnSelected;
-                        BagTxt.text = BagUnSelected;
-                        CardTxt.text = CardUnSelected;
-                        SaveTxt.text = SaveUnSelected;
-                       
-                        SettingsTxt.text = SetSelected;
-                        if(Input.GetKeyDown(KeyCode.Return)){
-                            goToSettings();
-                        } 
-                        break;
+            switch (currentSelection)
+            {
+                case 1:
+                    PokeDexTxt.text = PokeDexSelected; //Arrow here
+                    PokeTxt.text = PokeUnSelected;
+                    BagTxt.text = BagUnSelected;
+                    CardTxt.text = CardUnSelected;
+                    SaveTxt.text = SaveUnSelected;
+
+                    SettingsTxt.text = SetUnSelected;
+                    QuitTxt.text = QuitUnSelected;
+                    if (Input.GetKeyDown(KeyCode.Return))
+                    {
+                        goToPokeDex();
+                    }
+                    break;
+                case 2:
+                    PokeDexTxt.text = PokeDexUnSelected;
+                    PokeTxt.text = PokeSelected;
+                    BagTxt.text = BagUnSelected;
+                    CardTxt.text = CardUnSelected;
+                    SaveTxt.text = SaveUnSelected;
+
+                    SettingsTxt.text = SetUnSelected;
+                    QuitTxt.text = QuitUnSelected;
+                    if (Input.GetKeyDown(KeyCode.Return))
+                    {
+                        goToPokeParty();
+                    }
+                    break;
+                case 3:
+                    PokeDexTxt.text = PokeDexUnSelected;
+                    PokeTxt.text = PokeUnSelected;
+                    BagTxt.text = BagSelected;
+                    CardTxt.text = CardUnSelected;
+                    SaveTxt.text = SaveUnSelected;
+
+                    SettingsTxt.text = SetUnSelected;
+                    QuitTxt.text = QuitUnSelected;
+                    if (Input.GetKeyDown(KeyCode.Return))
+                    {
+                        goToBag();
+                    }
+                    break;
+                case 4:
+                    PokeDexTxt.text = PokeDexUnSelected;
+                    PokeTxt.text = PokeUnSelected;
+                    BagTxt.text = BagUnSelected;
+                    CardTxt.text = CardSelected;
+                    SaveTxt.text = SaveUnSelected;
+
+                    SettingsTxt.text = SetUnSelected;
+                    QuitTxt.text = QuitUnSelected;
+                    if (Input.GetKeyDown(KeyCode.Return))
+                    {
+                        goToTrainerCard();
+                    }
+                    break;
+                case 5:
+                    PokeDexTxt.text = PokeDexUnSelected;
+                    PokeTxt.text = PokeUnSelected;
+                    BagTxt.text = BagUnSelected;
+                    CardTxt.text = CardUnSelected;
+                    SaveTxt.text = SaveSelected;
+
+                    SettingsTxt.text = SetUnSelected;
+                    QuitTxt.text = QuitUnSelected;
+                    if (Input.GetKeyDown(KeyCode.Return))
+                    {
+                        player.SavePlayer();
+                    }
+                    break;
+                case 6:
+                    PokeDexTxt.text = PokeDexUnSelected;
+                    PokeTxt.text = PokeUnSelected;
+                    BagTxt.text = BagUnSelected;
+                    CardTxt.text = CardUnSelected;
+                    SaveTxt.text = SaveUnSelected;
+
+                    SettingsTxt.text = SetSelected;
+                    QuitTxt.text = QuitUnSelected;
+                    if (Input.GetKeyDown(KeyCode.Return))
+                    {
+                        goToSettings();
+                    }
+                    break;
                 case 7:
                     PokeDexTxt.text = PokeDexUnSelected;
                     PokeTxt.text = PokeUnSelected;
                     BagTxt.text = BagUnSelected;
                     CardTxt.text = CardUnSelected;
                     SaveTxt.text = SaveUnSelected;
-                    
+
                     SettingsTxt.text = SetUnSelected;
+                    QuitTxt.text = QuitSelected;
                     if (Input.GetKeyDown(KeyCode.Return))
                     {
                         goToQuit();
@@ -168,29 +190,39 @@ public class MenuController : MonoBehaviour
 
     }
 
-    public void goToPokeDex() {
+    public void goToPokeDex()
+    {
         Debug.Log("Go to PokeDex");
     }
-    public void goToPokeParty() {
+    public void goToPokeParty()
+    {
         Debug.Log("Go to Party");
     }
-    public void goToBag() {
-        inventory.SetActive(true);
+
+    public bool inventoryUIup = false;
+    public void goToBag()
+    {
+        //inventory.SetActive(true);
         Debug.Log("Go to Bag");
+        SceneManager.LoadSceneAsync("Inventory_Scene", LoadSceneMode.Additive);
 
     }
-    public void goToTrainerCard() {
+    public void goToTrainerCard()
+    {
         Debug.Log("Go to TranerCard");
     }
-    public void saveState() {
+    public void saveState()
+    {
         // Debug.Log("Go to Save");
         player.SavePlayer();
     }
-    public void goToSettings() {
+    public void goToSettings()
+    {
         Debug.Log("Go to Settings");
     }
-    public void goToQuit() {
+    public void goToQuit()
+    {
         Application.Quit();
-       // UnityEditor.EditorApplication.Exit(0);
+        // UnityEditor.EditorApplication.Exit(0);
     }
 }

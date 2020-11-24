@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class BagInventory : MonoBehaviour
 {
-    public GameObject inventory;
+    Player player;
+    public Inventory inventoryOther;
     public Text inventoryText;
     public string text;
     
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     //  public int[] inventory;
@@ -28,17 +30,14 @@ public class BagInventory : MonoBehaviour
             if (gameObject.tag == "Potion")
             {
                 Destroy(gameObject);
-                potion++;
-                CountPotion();
-
+                player.addPotion();
                 //  print(inventory);
             }
 
             else if (gameObject.tag == "pokeball")
             {
                 Destroy(gameObject);
-                pokeball++;
-                CountBall();
+                player.addPokeball();
                 // print(inventory);
             }
         }

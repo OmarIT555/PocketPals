@@ -5,17 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class music : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    private void Start(){
-       
-    }
+
+    public AudioSource BGM;
+
     void Awake()
     {
-       
+        GameObject[] musicObj = GameObject.FindGameObjectsWithTag("GameMusic");
+        BGM = this.GetComponent<AudioSource>();
+        if (musicObj.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+        DontDestroyOnLoad(this.gameObject);
 
     }
 
-    // Update is called once per frame
+    public void ChangeBGM(AudioClip music)
+    {
+        BGM.Stop();
+        BGM.clip = music;
+        BGM.Play();
+    }
     
 }

@@ -6,29 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Character.unity
-    guid: 592f5d8e934358643b6230fdede64b9d
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Menu/PreStart.unity
+    guid: 7dd8d8055488a404ca1abd39bb32855b
+  - enabled: 1
+    path: Assets/Scenes/Menu/Menu_Start.unity
+    guid: 5fcdb8190702a9d4c9f41d3593ce112f
   - enabled: 1
     path: Assets/Scenes/Battle_Scene.unity
     guid: 6f19e43edf0f5124da137a1799309bd8
   - enabled: 1
-    path: Assets/Scenes/Inventory.unity
-    guid: 687f43bf671e91348a73ea35a9a64915
+    path: Assets/Inventory/Inventory_Scene.unity
+    guid: 153c3f7e9a1cb124abf1ca0a84383694
   - enabled: 0
     path: 
-    guid: 24a90e62095c2ed448864fc92d6d8a31
-  - enabled: 0
+    guid: 00000000000000000000000000000000
+  - enabled: 1
     path: Assets/Scenes/Home.unity
     guid: c0029abbc08ccac4c8844326c6eaf2f7
   - enabled: 1
     path: Assets/Scenes/OverWorld.unity
     guid: 307da54809f17014781bfbacdbe5d4b7
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/pokecenter_interior.unity
     guid: 51e63018e8e428c41854aba37e8135fa
@@ -36,9 +36,42 @@ EditorBuildSettings:
     path: Assets/Scenes/GymOne.unity
     guid: d5e3787d4e6aa38449d0292831b50725
   - enabled: 1
-    path: Assets/Scenes/Firebase.unity
-    guid: 69d49c774007fb74281e166379d8e47c
-  - enabled: 1
     path: Assets/Scenes/PokeMart_interior.unity
     guid: 2815067e9b78ab24683019475474f3e9
+  - enabled: 1
+    path: Assets/Scenes/House Internals/HouseInterior1.unity
+    guid: f07833e0d944c0544a88e0b257ffeab9
+  - enabled: 1
+    path: Assets/Scenes/House Internals/HouseInterior2.unity
+    guid: 0bf02a4379b1a8244874f2bc921dccba
+  - enabled: 1
+    path: Assets/Scenes/House Internals/BeachGym.unity
+    guid: 41777ddb348186e4bb03ec06997920da
+  - enabled: 1
+    path: Assets/Scenes/House Internals/Dennis' House.unity
+    guid: f8f64978aab30a040ab0440335c2fa5e
+  - enabled: 1
+    path: Assets/Scenes/House Internals/Dennis' House 2nd Floor.unity
+    guid: 40671c0e67565cb4685245d2b3340262
+  - enabled: 1
+    path: Assets/Scenes/House Internals/Forest of Strength Pokemart.unity
+    guid: 94e269b77b06df94792ea8321164009d
+  - enabled: 1
+    path: Assets/Scenes/House Internals/Forest of Strength Pokecenter.unity
+    guid: f947efd98bcde4248b639069fc127595
+  - enabled: 1
+    path: Assets/Scenes/IceTown.unity
+    guid: b5359c9934ef38740a7cd303aeceb824
+  - enabled: 1
+    path: Assets/Scenes/forest.unity
+    guid: 6f2ffc5b48779284aadbc0c75542eebd
+  - enabled: 1
+    path: Assets/Scenes/House Internals/Forest of Strength TownHouse.unity
+    guid: d957cb0c5537e3242adb17cd02793496
+  - enabled: 1
+    path: Assets/Scenes/House Internals/Forest of Strength TownHouse 2F.unity
+    guid: 37ce9dc75de944f468d99f51b66914fc
+  - enabled: 1
+    path: Assets/Scenes/House Internals/Omar's Gym.unity
+    guid: 7f65903933f93a24dadc676aa509f3cf
   m_configObjects: {}

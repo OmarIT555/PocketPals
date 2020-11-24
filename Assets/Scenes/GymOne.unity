@@ -120,6 +120,211 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &4427262
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_Name
+      value: Austin (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -85.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 135.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 598f4f2ed7e620a4b8c19b12cca0f221,
+        type: 3}
+    - target: {fileID: 50354309302074784, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da7e1fa19d9fc4245b6b4d12b2d2a784, type: 3}
+--- !u!1 &4427263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+    type: 3}
+  m_PrefabInstance: {fileID: 4427262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4427264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4427263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f7ff672dd8b024b97f113ab2c982d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sign: {fileID: 1627101223}
+  ownedPokemon:
+  - NickName: Monkie
+    pokemon: {fileID: 5672179643844261084, guid: 1cb8db91386f83544a4d406e1b460518,
+      type: 3}
+    basePokemonID: 3
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 10
+        maximum: 20
+      moveType: 6
+      currentPP: 20
+      PP: 20
+      power: 40
+      accuracy: 90
+  signText: {fileID: 1627101222}
+  gymLeader: {fileID: 21300000, guid: 598f4f2ed7e620a4b8c19b12cca0f221, type: 3}
+  introBattleText: You won't make it the the gymleader.
+  introText: Prepare for battle!
+  defeatText: Wow, your way stronger than you look.
+  active: 0
+  beaten: 0
+  ID: 3
+--- !u!61 &4427265
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4427263}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00062076, y: 0.003899034}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.22}
+    newSize: {x: 0.96875, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.14737447, y: 0.22205263}
+  m_EdgeRadius: 0
+--- !u!61 &4427266
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4427263}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05732149, y: -0.052787274}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.22}
+    newSize: {x: 0.96875, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4668094, y: 0.42557454}
+  m_EdgeRadius: 0
 --- !u!1 &296798006
 GameObject:
   m_ObjectHideFlags: 0
@@ -6336,6 +6541,283 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 2}
   m_EdgeRadius: 0
+--- !u!1001 &746034653
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_Name
+      value: Austin (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -76.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 126.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2be6370c3e311a64fb283bab61b07bb9,
+        type: 3}
+    - target: {fileID: 50354309302074784, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da7e1fa19d9fc4245b6b4d12b2d2a784, type: 3}
+--- !u!1 &746034654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+    type: 3}
+  m_PrefabInstance: {fileID: 746034653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &746034655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746034654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f7ff672dd8b024b97f113ab2c982d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sign: {fileID: 1627101223}
+  ownedPokemon:
+  - NickName: Rat
+    pokemon: {fileID: 5672179643844261084, guid: 22eb65352f949df4a8d26215c2a9dd59,
+      type: 3}
+    basePokemonID: 3
+    moves:
+    - Name: Tackle
+      category: 0
+      moveStat:
+        minimum: 10
+        maximum: 20
+      moveType: 6
+      currentPP: 20
+      PP: 20
+      power: 40
+      accuracy: 90
+  signText: {fileID: 1627101222}
+  gymLeader: {fileID: 21300000, guid: 2be6370c3e311a64fb283bab61b07bb9, type: 3}
+  introBattleText: This is my first battle here.
+  introText: I cannot lose to you.
+  defeatText: Wow, I still have a lot of training to do.
+  active: 0
+  beaten: 0
+  ID: 4
+--- !u!61 &746034656
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746034654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00062076, y: 0.003899034}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.2}
+    newSize: {x: 0.96875, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.14737447, y: 0.22205263}
+  m_EdgeRadius: 0
+--- !u!61 &746034657
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746034654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05732149, y: -0.052787274}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.2}
+    newSize: {x: 0.96875, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4668094, y: 0.42557454}
+  m_EdgeRadius: 0
+--- !u!1 &769176220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769176223}
+  - component: {fileID: 769176222}
+  - component: {fileID: 769176221}
+  m_Layer: 0
+  m_Name: exit 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &769176221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769176220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7fa30da32e94f045b98428dc77d2a75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vector: {x: -93.6, y: 21.01}
+  unload: GymOne
+--- !u!61 &769176222
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769176220}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.07589722, y: 0.19687271}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6157837, y: 0.49634552}
+  m_EdgeRadius: 0
+--- !u!4 &769176223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769176220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -80.92, y: 119.23, z: -1971.582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &850655995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6347,6 +6829,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Austin
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074791, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_TagString
+      value: GymLeader
       objectReference: {fileID: 0}
     - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
         type: 3}
@@ -6403,11 +6890,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074786, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
         type: 3}
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 50354309302074789, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ad337804747d99643a644aaffbead321,
+        type: 3}
     - target: {fileID: 50354309302074784, guid: da7e1fa19d9fc4245b6b4d12b2d2a784,
         type: 3}
       propertyPath: m_BodyType
@@ -6428,14 +6936,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850655996}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaf77a1a00b4f3844afbebb950327dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sign: {fileID: 1627101223}
   signText: {fileID: 1627101222}
-  text: I'm the buff beef boy gym leader. Let's get this started!
+  text: 'Austin: I''m the buff beef boy gym leader. Let''s get this started!'
   active: 0
 --- !u!61 &850655998
 BoxCollider2D:
@@ -6489,6 +6997,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14737447, y: 0.20202073}
   m_EdgeRadius: 0
+--- !u!114 &850656000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850655996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f4b344260db9548933f4bf770cfa3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sign: {fileID: 1627101223}
+  ownedPokemon:
+  - NickName: Muscle Kid
+    pokemon: {fileID: 5900891777610994904, guid: f6554920830d16244a265f1f3b4765f7,
+      type: 3}
+    basePokemonID: 1
+    moves:
+    - Name: Chop
+      category: 0
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 7
+      currentPP: 15
+      PP: 15
+      power: 50
+      accuracy: 100
+    - Name: Bulk Up
+      category: 2
+      moveStat:
+        minimum: 0
+        maximum: 0
+      moveType: 7
+      currentPP: 20
+      PP: 20
+      power: 0
+      accuracy: 100
+  signText: {fileID: 1627101222}
+  gymLeader: {fileID: 21300000, guid: ad337804747d99643a644aaffbead321, type: 3}
+  introBattleText: 'Austin: I am the fighting gym leader! Prepare to lose!'
+  introText: 'Austin: I am beef boy Austin, welcome to the fighting gym!'
+  defeatText: 'Austin: Good Job on beating me. I wish you luck on future gyms!'
+  active: 0
+  beaten: 0
 --- !u!1001 &1084954124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13951,10 +14505,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5492935059393410920, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 29.8
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5492935059322737467, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
         type: 3}
@@ -13976,25 +14545,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 2.1
       objectReference: {fileID: 0}
-    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+    - target: {fileID: 1149018284039999176, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
         type: 3}
-      propertyPath: m_Color.r
-      value: 1
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
+    - target: {fileID: 5492935059393410920, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
         type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5492935059393410921, guid: 08b7f785bc6f3a844aa3b39d5dc2e520,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
+      propertyPath: m_AnchoredPosition.x
+      value: 29.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b7f785bc6f3a844aa3b39d5dc2e520, type: 3}

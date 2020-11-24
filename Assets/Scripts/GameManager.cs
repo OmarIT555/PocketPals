@@ -14,6 +14,14 @@ public class GameManager : MonoBehaviour {
     public List<WildPokemon> allPokemon = new List<WildPokemon>();
     public List<PokemonMoves> allMoves = new List<PokemonMoves>();
 
+    private music music;
+
+    public AudioClip grassBattle;
+    public AudioClip trainerBattle;
+    public AudioClip gymBattle;
+    public AudioClip overworld;
+
+
     // private Transform defencePodium;
     // private Transform attackPodium;
     // public GameObject emptyPoke;
@@ -23,21 +31,24 @@ public class GameManager : MonoBehaviour {
     // private LongGrass lg;
     Player player;
     int i = 1;
-    
+    int battleType;
+    int trainer;
 
     public GameObject menu;
+    public static bool checkBattle;
     // private MenuController mc;
 
 	void Start () {
-        
+        battleType = 0;
+        checkBattle = false;
         bm = GetComponent<BattleManager>();
         player = GameObject.Find("Player").GetComponent<Player>();
-        
+        music = FindObjectOfType<music>();
     }
 	
 	void Update () {
-        if(Input.GetKeyDown(KeyCode.E)) {
-            // Debug.Log("E button pressed");
+        if(Input.GetKeyDown(KeyCode.E) && checkBattle == false) {
+            //Debug.Log("E button pressed");
             toggleMenuUI();
         }
         if (Input.GetKeyDown(KeyCode.L)) 
@@ -58,11 +69,28 @@ public class GameManager : MonoBehaviour {
 
     public void EnterBattle()
     {
+
+        if (battleType == 1)
+        {
+            music.ChangeBGM(grassBattle);
+        }
+        if (battleType == 2)
+        {
+            music.ChangeBGM(gymBattle);
+        }
+        if (battleType == 3)
+        {
+            music.ChangeBGM(trainerBattle);
+        }
+        checkBattle = true;
         Time.timeScale = 0f;
         SceneManager.LoadScene("Battle_Scene",LoadSceneMode.Additive);
     }
 
     public void ExitBattle() {
+        music.ChangeBGM(overworld);
+        checkBattle = false;
+        battleType = 0;
         SceneManager.UnloadSceneAsync("Battle_Scene");
         Time.timeScale = 1f;
     }
@@ -109,6 +137,26 @@ public class GameManager : MonoBehaviour {
         // for(int i = 0; i<lg.wildPokemon.count;i++) {
 
         // }
+    }
+
+    public void setBattleType(int i)
+    {
+        battleType = i;
+    }
+
+    public int getBattleType()
+    {
+        return battleType;
+    }
+
+    public void setTrainer(int trainer)
+    {
+        this.trainer = trainer;
+    }
+
+    public int getTrainer()
+    {
+        return trainer;
     }
 
     public WildPokemon GetRandomPokemonFromList(List<WildPokemon> pokeList)

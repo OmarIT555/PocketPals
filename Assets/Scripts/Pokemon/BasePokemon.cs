@@ -15,11 +15,16 @@ public class BasePokemon : MonoBehaviour {
     private int maxHP;
     public Stat AttackStat;
     public Stat DefenceStat;
+    public StatusEffect currentStatusEffect;
 
     public PokemonStats pokemonStats;
 
     public bool canEvolve;
     public PokemonEvolution evolveTo;
+
+    // public Transform
+    public Vector3 scalePos;
+    public Vector3 pos;
 
 
 	void Start () {
@@ -44,7 +49,16 @@ public class BasePokemon : MonoBehaviour {
         this.canEvolve = bp.canEvolve;
         this.evolveTo = bp.evolveTo;
         this.level = bp.level;
+        this.currentStatusEffect = bp.currentStatusEffect;
     }
+}
+
+public enum StatusEffect {
+    Burn,
+    Poison,
+    Paralyze,
+    Confused,
+    None
 }
 
 public enum Rarity

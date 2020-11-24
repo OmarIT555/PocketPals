@@ -93,18 +93,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8441b421e39168d4585705df7d2f86d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PName: Ivysaur
+  PName: MedPlant
+  level: 10
   image: {fileID: 21300002, guid: 3758d8af407a97546b2c4d4f81849853, type: 3}
   biomeFound: 0
-  type: 6
+  type: 2
   rarity: 1
   HP: 60
+  FullHP: 60
+  maxHP: 60
   AttackStat:
-    minimum: 0
-    maximum: 0
+    minimum: 20
+    maximum: 25
   DefenceStat:
-    minimum: 0
-    maximum: 0
+    minimum: 20
+    maximum: 25
+  currentStatusEffect: 0
   pokemonStats:
     AttackStat: 62
     DefenceStat: 63
@@ -116,3 +120,5 @@ MonoBehaviour:
   evolveTo:
     nextEvolution: {fileID: 0}
     levelUpLevel: 36
+  scalePos: {x: 0.4, y: 0.4, z: 0}
+  pos: {x: 0, y: 0.2, z: 0}
