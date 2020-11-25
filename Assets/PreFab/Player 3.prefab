@@ -762,6 +762,8 @@ MonoBehaviour:
   change: {x: 0, y: 0, z: 0}
   Ani: {fileID: 0}
   canMove: 0
+  isJumping: 0
+  startingPosition: {fileID: 0}
 --- !u!114 &4190329452699157072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +776,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de7f8e832c102d249a1f7712a568a762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   inventoryText: {fileID: 0}
   text: 
   active: 0
@@ -1459,7 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b564a7ebdefe4e0d8448ab21de86f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
+  UI_Inventory: {fileID: 0}
   inventoryText: {fileID: 0}
   menuUI: {fileID: 4190329452920659560}
   PokeDexTxt: {fileID: 4190329452389939312}
@@ -1469,6 +1470,7 @@ MonoBehaviour:
   SaveTxt: {fileID: 4190329453228448182}
   QuitTxt: {fileID: 0}
   SettingsTxt: {fileID: 4190329453516664841}
+  inventoryUIup: 0
 --- !u!1 &4190329453760991586
 GameObject:
   m_ObjectHideFlags: 0
